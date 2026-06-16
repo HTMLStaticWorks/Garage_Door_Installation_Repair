@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - ProLift Garage Doors</title>
+  <meta name="description" content="Register for a ProLift membership. Get real-time dispatch tracking, annual tune-up bookings, parts at cost, and priority local support.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="main-navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" id="nav-logo">
+        <i class="fa-solid fa-warehouse"></i> ProLift
+      </a>
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="index.html" class="navbar-link" id="link-home">Home</a></li>
+        <li><a href="home1.html" class="navbar-link" id="link-home1">Home1</a></li>
+        <li><a href="about.html" class="navbar-link" id="link-about">About</a></li>
+        <li><a href="services.html" class="navbar-link" id="link-services">Services</a></li>
+        <li><a href="pricing.html" class="navbar-link" id="link-pricing">Pricing</a></li>
+        <li><a href="dashboard.html" class="navbar-link" id="link-dashboard">Dashboard</a></li>
+        <li><a href="signup.html" class="navbar-link" id="link-signup">Sign Up</a></li>
+      </ul>
+      <div class="navbar-controls">
+        <button class="control-btn" id="theme-toggle" aria-label="Toggle dark theme">
+          <i class="fa-solid fa-moon"></i> <span>Dark</span>
+        </button>
+        <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL direction">
+          <i class="fa-solid fa-globe"></i> <span>RTL</span>
+        </button>
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1 & 2: SPLIT HERO + SIGN UP FORM -->
+  <section class="split-hero">
+    <div class="split-hero-left">
+      <div class="badge-pulse fade-in show" style="background-color: var(--primary); width: fit-content; margin-bottom: var(--space);">
+        <i class="fa-solid fa-shield-halved"></i> Join the Club
+      </div>
+      <h1 class="fade-in show">Join Thousands of Happy Homeowners</h1>
+      <p class="fade-in show" style="font-size: 1.25rem; color:rgba(255,255,255,0.85); max-width:500px;">Unlock member-only discounts, priority dispatch schedules, and digital technician tracking options.</p>
+    </div>
+    
+    <div class="split-hero-right">
+      <div class="signup-card fade-in show">
+        <h2 style="font-family: var(--font-display); font-size:1.8rem; margin-bottom:calc(var(--space) * 3);">Create Your Account</h2>
+        
+        <form id="signup-form" novalidate>
+          <!-- Full Name -->
+          <div class="form-group">
+            <label class="form-label" for="name">Full Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Min 3 characters" required>
+            <span class="form-error">Please enter at least 3 characters.</span>
+          </div>
+
+          <!-- Email Address -->
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input type="email" id="email" class="form-input" placeholder="yourname@example.com" required>
+            <span class="form-error">Please enter a valid email address.</span>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input type="tel" id="phone" class="form-input" placeholder="10-digit phone number" required>
+            <span class="form-error">Please enter a valid 10-digit US phone number.</span>
+          </div>
+
+          <!-- City Selection -->
+          <div class="form-group">
+            <label class="form-label" for="city">City Location</label>
+            <select id="city" class="form-input" style="appearance: auto;">
+              <option value="phoenix">Phoenix</option>
+              <option value="scottsdale">Scottsdale</option>
+              <option value="mesa">Mesa</option>
+              <option value="tempe">Tempe</option>
+              <option value="chandler">Chandler</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <!-- Plan Selection -->
+          <div class="form-group">
+            <label class="form-label" for="plan">Select Plan</label>
+            <select id="plan" class="form-input" style="appearance: auto;">
+              <option value="basic">Basic Plan — $79 / $19 mo</option>
+              <option value="pro" selected>Pro Plan — $149 / $119 mo</option>
+              <option value="elite">Elite Plan — $249 / $199 mo</option>
+            </select>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <input type="password" id="password" class="form-input" placeholder="Min 8 characters" required>
+            <span class="form-error">Password must be at least 8 characters long.</span>
+            <div class="strength-meter">
+              <div class="strength-bar" id="strength-bar"></div>
+            </div>
+            <span style="font-size:0.75rem; color:var(--gray); margin-top:4px; display:block;">Use numbers, letters & symbols for strength.</span>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="form-group">
+            <label class="form-label" for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" class="form-input" placeholder="Re-enter password" required>
+            <span class="form-error">Passwords must match.</span>
+          </div>
+
+          <!-- Terms & Conditions -->
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" required checked>
+            <label for="terms">I agree to the <a href="#" style="color:var(--primary); text-decoration:underline;">Terms & Conditions</a> and privacy policies.</label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary btn-full" id="btn-submit">
+            Create My Account
+          </button>
+        </form>
+
+        <!-- SECTION 3: SOCIAL SIGN UP -->
+        <div class="social-signup-div">
+          <span class="social-signup-text">or continue with</span>
+        </div>
+
+        <div class="social-grid">
+          <button class="btn btn-outline" onclick="alert('Google Auth Triggered');" style="font-size:0.85rem; padding: 10px; border-radius: var(--radius-input);">
+            <i class="fa-brands fa-google" style="color:#e74c3c;"></i> Google
+          </button>
+          <button class="btn btn-outline" onclick="alert('Facebook Auth Triggered');" style="font-size:0.85rem; padding: 10px; border-radius: var(--radius-input);">
+            <i class="fa-brands fa-facebook" style="color:#3498db;"></i> Facebook
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: WHAT YOU GET -->
+  <section class="section section-alt" id="signup-perks">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Perks of Being a ProLift Member</h2>
+        <p class="section-subtitle fade-in">Unlock smart digital tools and priority local support dispatch.</p>
+      </div>
+
+      <div class="grid-4">
+        <!-- Perk 1 -->
+        <div class="card text-center fade-in" style="display:flex; flex-direction:column; align-items:center;">
+          <div class="card-icon" style="font-size:2rem;"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h3 class="card-title" style="font-size:1.1rem;">GPS Dispatch Track</h3>
+          <p class="card-description" style="font-size:0.85rem;">See exact technician routes, estimated arrivals, and real-time credentials on map.</p>
+        </div>
+        <!-- Perk 2 -->
+        <div class="card text-center fade-in" style="display:flex; flex-direction:column; align-items:center;">
+          <div class="card-icon" style="font-size:2rem;"><i class="fa-solid fa-tags"></i></div>
+          <h3 class="card-title" style="font-size:1.1rem;">Exclusive Rates</h3>
+          <p class="card-description" style="font-size:0.85rem;">Save up to 20% on parts, rollers, safety cables, and custom panel replacements.</p>
+        </div>
+        <!-- Perk 3 -->
+        <div class="card text-center fade-in" style="display:flex; flex-direction:column; align-items:center;">
+          <div class="card-icon" style="font-size:2rem;"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3 class="card-title" style="font-size:1.1rem;">Priority Dispatch</h3>
+          <p class="card-description" style="font-size:0.85rem;">Receive emergency storm door and spring repair queues under 2 hours.</p>
+        </div>
+        <!-- Perk 4 -->
+        <div class="card text-center fade-in" style="display:flex; flex-direction:column; align-items:center;">
+          <div class="card-icon" style="font-size:2rem;"><i class="fa-solid fa-calendar-check"></i></div>
+          <h3 class="card-title" style="font-size:1.1rem;">Service Reminders</h3>
+          <p class="card-description" style="font-size:0.85rem;">Get seasonal smart notifications for track oiling, sensor cleaning, and safety audits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: TRUST STRIP -->
+  <section class="section" id="signup-trust" style="padding: calc(var(--space) * 4) 0;">
+    <div class="container stats-container" style="justify-content: space-around;">
+      <div class="stat-item fade-in" style="min-width: 150px;">
+        <span style="font-size:1.5rem; color:var(--primary);"><i class="fa-solid fa-circle-check"></i></span>
+        <span style="font-family:var(--font-display); font-size:1rem; text-transform:uppercase; font-weight:bold; margin-inline-start:8px; color:var(--text);">SSL Secure Connection</span>
+      </div>
+      <div class="stat-item fade-in" style="min-width: 150px;">
+        <span style="font-size:1.5rem; color:var(--primary);"><i class="fa-solid fa-circle-check"></i></span>
+        <span style="font-family:var(--font-display); font-size:1rem; text-transform:uppercase; font-weight:bold; margin-inline-start:8px; color:var(--text);">Licensed Overhead firm</span>
+      </div>
+      <div class="stat-item fade-in" style="min-width: 150px;">
+        <span style="font-size:1.5rem; color:var(--primary);"><i class="fa-solid fa-circle-check"></i></span>
+        <span style="font-family:var(--font-display); font-size:1rem; text-transform:uppercase; font-weight:bold; margin-inline-start:8px; color:var(--text);">BBB Accredited A+</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: ALREADY HAVE AN ACCOUNT? -->
+  <section class="section section-alt" id="already-member" style="padding: calc(var(--space) * 6) 0;">
+    <div class="container text-center fade-in">
+      <p style="margin-bottom: var(--space); font-weight: 500;">Already a ProLift member?</p>
+      <button class="btn btn-outline-primary" onclick="alert('Login portal popup triggered...');">Log In to Your Account <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <i class="fa-solid fa-warehouse"></i> ProLift Garage Doors
+          </div>
+          <p>Serving Phoenix & surrounding areas since 1999. Family owned, locally operated, and built on trust and credibility.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home1.html" class="footer-link">Home1</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">New Installation</a></li>
+            <li><a href="services.html" class="footer-link">Spring Repair</a></li>
+            <li><a href="services.html" class="footer-link">Cable Repair</a></li>
+            <li><a href="services.html" class="footer-link">Opener Install</a></li>
+            <li><a href="services.html" class="footer-link">Tune-Up & Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Phone:</strong><br>
+                (602) 555-0198
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email:</strong><br>
+                info@proliftdoors.com
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Address:</strong><br>
+                Phoenix, AZ 85001
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Hours:</strong><br>
+                Mon–Sat: 7AM–8PM<br>
+                Sun: Emergency Only
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 ProLift Garage Doors. All rights reserved.</div>
+        <div class="footer-rating">
+          <i class="fa-solid fa-star"></i>
+          <span><strong>4.9/5</strong> Google Rating</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

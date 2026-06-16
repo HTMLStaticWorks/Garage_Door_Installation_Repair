@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - ProLift Garage Doors</title>
+  <meta name="description" content="Manage dispatch lines, customer accounts, technician metrics, and weekly jobs inside the ProLift local field supervisor dashboard.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="main-navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" id="nav-logo">
+        <i class="fa-solid fa-warehouse"></i> ProLift
+      </a>
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="index.html" class="navbar-link" id="link-home">Home</a></li>
+        <li><a href="home1.html" class="navbar-link" id="link-home1">Home1</a></li>
+        <li><a href="about.html" class="navbar-link" id="link-about">About</a></li>
+        <li><a href="services.html" class="navbar-link" id="link-services">Services</a></li>
+        <li><a href="pricing.html" class="navbar-link" id="link-pricing">Pricing</a></li>
+        <li><a href="dashboard.html" class="navbar-link" id="link-dashboard">Dashboard</a></li>
+        <li><a href="signup.html" class="navbar-link" id="link-signup">Sign Up</a></li>
+      </ul>
+      <div class="navbar-controls">
+        <button class="control-btn" id="theme-toggle" aria-label="Toggle dark theme">
+          <i class="fa-solid fa-moon"></i> <span>Dark</span>
+        </button>
+        <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL direction">
+          <i class="fa-solid fa-globe"></i> <span>RTL</span>
+        </button>
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: DASHBOARD HEADER BAR -->
+  <div class="dashboard-bar">
+    <div class="container dashboard-bar-container">
+      <div class="db-greeting">Welcome back, Admin 👋</div>
+      <div class="db-clock-wrap">
+        <span id="db-date" style="font-size:0.85rem; color:var(--gray);">Tuesday, June 16, 2026</span>
+        <span class="db-clock" id="db-clock">12:40:20 AM</span>
+      </div>
+      <div class="db-actions">
+        <button class="btn btn-primary" onclick="alert('Creating a new service dispatch...');" style="padding: 6px 16px; font-size:0.85rem; border-radius:var(--radius-input);">
+          <i class="fa-solid fa-plus"></i> New Job
+        </button>
+        <button class="btn btn-secondary" onclick="alert('Adding customer account...');" style="padding: 6px 16px; font-size:0.85rem; border-radius:var(--radius-input); background-color:rgba(255,255,255,0.08); border-color:var(--border);">
+          <i class="fa-solid fa-user-plus"></i> Add Customer
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN DASHBOARD CONTENT -->
+  <main class="section section-alt" style="padding-top: calc(var(--space) * 4);">
+    <div class="container">
+      <!-- SECTION 2: STATS CARDS ROW -->
+      <div class="stats-card-row">
+        <!-- Stat 1 -->
+        <div class="db-stat-card fade-in show">
+          <span style="color:var(--gray); font-size:0.85rem; font-weight:bold; text-transform:uppercase;">Open Jobs Today</span>
+          <div class="db-stat-val">14</div>
+          <span class="trend-indicator trend-up"><i class="fa-solid fa-arrow-trend-up"></i> ↑ 3 new jobs since 7 AM</span>
+        </div>
+        <!-- Stat 2 -->
+        <div class="db-stat-card fade-in show">
+          <span style="color:var(--gray); font-size:0.85rem; font-weight:bold; text-transform:uppercase;">Completed This Week</span>
+          <div class="db-stat-val">67</div>
+          <span class="trend-indicator trend-up"><i class="fa-solid fa-arrow-trend-up"></i> On track to beat target of 80</span>
+        </div>
+        <!-- Stat 3 -->
+        <div class="db-stat-card fade-in show">
+          <span style="color:var(--gray); font-size:0.85rem; font-weight:bold; text-transform:uppercase;">Revenue This Month</span>
+          <div class="db-stat-val">$24,350</div>
+          <span class="trend-indicator trend-up"><i class="fa-solid fa-arrow-trend-up"></i> ↑ 8% vs last month</span>
+        </div>
+        <!-- Stat 4 -->
+        <div class="db-stat-card fade-in show">
+          <span style="color:var(--gray); font-size:0.85rem; font-weight:bold; text-transform:uppercase;">Avg Customer Rating</span>
+          <div class="db-stat-val">4.9 / 5</div>
+          <span class="trend-indicator trend-up" style="color:#FFB000;"><i class="fa-solid fa-star"></i> Based on 500+ audits</span>
+        </div>
+      </div>
+
+      <!-- SECTION 3: ACTIVE JOBS TABLE -->
+      <div class="fade-in show">
+        <h3 class="db-table-title">Active Dispatches</h3>
+        <div class="table-responsive" style="margin-top: 0; margin-bottom: calc(var(--space) * 4);">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Job ID</th>
+                <th>Customer</th>
+                <th>Address</th>
+                <th>Service Type</th>
+                <th>Technician</th>
+                <th>Status</th>
+                <th>ETA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>#1044</strong></td>
+                <td>Arthur Pendelton</td>
+                <td>1204 Camelback Rd, Phoenix</td>
+                <td>Spring Repair</td>
+                <td>Mike R.</td>
+                <td><span class="status-badge status-enroute">En Route</span></td>
+                <td>12 min</td>
+              </tr>
+              <tr>
+                <td><strong>#1043</strong></td>
+                <td>Eleanor Vance</td>
+                <td>4809 Greenway Dr, Scottsdale</td>
+                <td>Installation</td>
+                <td>Dave S.</td>
+                <td><span class="status-badge status-onjob">In Progress</span></td>
+                <td>On Job</td>
+              </tr>
+              <tr>
+                <td><strong>#1042</strong></td>
+                <td>Marcus Aurelius</td>
+                <td>789 Maple Dr, Tempe</td>
+                <td>Tune-up</td>
+                <td>Carla M.</td>
+                <td><span class="status-badge status-available" style="background-color:rgba(52, 152, 219, 0.15); color:#3498db; border-color:#3498db;">Scheduled</span></td>
+                <td>2:00 PM</td>
+              </tr>
+              <tr>
+                <td><strong>#1041</strong></td>
+                <td>Cassie Smith</td>
+                <td>1540 Bell Rd, Glendale</td>
+                <td>Opener Install</td>
+                <td>Mike R.</td>
+                <td><span class="status-badge status-available">Completed</span></td>
+                <td>Finished</td>
+              </tr>
+              <tr>
+                <td><strong>#1040</strong></td>
+                <td>Donald Nguyen</td>
+                <td>2018 Southern Ave, Mesa</td>
+                <td>Cable Repair</td>
+                <td>Dave S.</td>
+                <td><span class="status-badge status-available">Completed</span></td>
+                <td>Finished</td>
+              </tr>
+              <tr>
+                <td><strong>#1039</strong></td>
+                <td>Patricia K.</td>
+                <td>324 Chandler Blvd, Chandler</td>
+                <td>Sensor Realignment</td>
+                <td>Carla M.</td>
+                <td><span class="status-badge status-available">Completed</span></td>
+                <td>Finished</td>
+              </tr>
+              <tr>
+                <td><strong>#1038</strong></td>
+                <td>Robert Vance</td>
+                <td>980 Tatum Blvd, Paradise Valley</td>
+                <td>Commercial Gate</td>
+                <td>Dave S.</td>
+                <td><span class="status-badge status-enroute" style="background-color:rgba(231, 76, 60, 0.15); color:#e74c3c; border-color:#e74c3c;">Cancelled</span></td>
+                <td>No Show</td>
+              </tr>
+              <tr>
+                <td><strong>#1037</strong></td>
+                <td>Samantha Miller</td>
+                <td>1450 Union Hills Dr, Phoenix</td>
+                <td>Spring Repair</td>
+                <td>Mike R.</td>
+                <td><span class="status-badge status-available">Completed</span></td>
+                <td>Finished</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SECTION 4: CHARTS SECTION -->
+      <div class="charts-grid">
+        <!-- Chart 1: Bar Chart -->
+        <div class="chart-card fade-in show">
+          <h3 class="chart-title">Weekly Jobs Completed</h3>
+          <div class="bar-chart-container">
+            <div class="bar-wrapper">
+              <div class="bar" style="height: 60%;"><span class="bar-val">12</span></div>
+              <span class="bar-label">Mon</span>
+            </div>
+            <div class="bar-wrapper">
+              <div class="bar" style="height: 75%;"><span class="bar-val">15</span></div>
+              <span class="bar-label">Tue</span>
+            </div>
+            <div class="bar-wrapper">
+              <div class="bar" style="height: 45%;"><span class="bar-val">9</span></div>
+              <span class="bar-label">Wed</span>
+            </div>
+            <div class="bar-wrapper">
+              <div class="bar" style="height: 90%;"><span class="bar-val">18</span></div>
+              <span class="bar-label">Thu</span>
+            </div>
+            <div class="bar-wrapper">
+              <div class="bar" style="height: 80%;"><span class="bar-val">16</span></div>
+              <span class="bar-label">Fri</span>
+            </div>
+            <div class="bar-wrapper">
+              <div class="bar" style="height: 55%;"><span class="bar-val">11</span></div>
+              <span class="bar-label">Sat</span>
+            </div>
+            <div class="bar-wrapper">
+              <div class="bar" style="height: 30%;"><span class="bar-val">6</span></div>
+              <span class="bar-label">Sun</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chart 2: Donut Chart -->
+        <div class="chart-card fade-in show">
+          <h3 class="chart-title">Service Type Mix</h3>
+          <div class="donut-chart-wrapper">
+            <div class="donut-chart">
+              <div class="donut-label-center">
+                <h4>87</h4>
+                <p>Total Runs</p>
+              </div>
+            </div>
+            
+            <ul class="chart-legend">
+              <li class="legend-item">
+                <div class="legend-color" style="background-color: var(--primary);"></div>
+                <span>New Installs (40%)</span>
+              </li>
+              <li class="legend-item">
+                <div class="legend-color" style="background-color: var(--steel);"></div>
+                <span>Spring Repair (35%)</span>
+              </li>
+              <li class="legend-item">
+                <div class="legend-color" style="background-color: #FFB000;"></div>
+                <span>Opener Upgrades (15%)</span>
+              </li>
+              <li class="legend-item">
+                <div class="legend-color" style="background-color: var(--gray);"></div>
+                <span>Maintenance/Other (10%)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM ROW: ACTIVITY FEED & QUICK ACTIONS -->
+      <div class="grid-2" style="margin-top: calc(var(--space) * 4); align-items: start;">
+        <!-- SECTION 5: RECENT ACTIVITY FEED -->
+        <div class="chart-card fade-in show">
+          <h3 class="chart-title">Operations Log</h3>
+          <div class="activity-feed">
+            <!-- Event 1 -->
+            <div class="activity-item">
+              <div class="activity-icon"><i class="fa-solid fa-wrench"></i></div>
+              <div class="activity-details">
+                <p>Job #1042 assigned to technician Mike R.</p>
+                <span class="activity-time">5 min ago</span>
+              </div>
+            </div>
+            <!-- Event 2 -->
+            <div class="activity-item">
+              <div class="activity-icon" style="background-color:rgba(46,204,113,0.15); color:#2ecc71;"><i class="fa-solid fa-check"></i></div>
+              <div class="activity-details">
+                <p>Job #1039 completed by lead tech Carla V.</p>
+                <span class="activity-time">22 min ago</span>
+              </div>
+            </div>
+            <!-- Event 3 -->
+            <div class="activity-item">
+              <div class="activity-icon" style="background-color:rgba(52, 152, 219, 0.15); color:#3498db;"><i class="fa-solid fa-phone"></i></div>
+              <div class="activity-details">
+                <p>New booking received — 789 Maple Dr. — pending dispatch</p>
+                <span class="activity-time">35 min ago</span>
+              </div>
+            </div>
+            <!-- Event 4 -->
+            <div class="activity-item">
+              <div class="activity-icon" style="background-color:rgba(241,196,15,0.15); color:#f1c40f;"><i class="fa-solid fa-comment-star"></i></div>
+              <div class="activity-details">
+                <p>5-star feedback received from D. Nguyen (Mesa)</p>
+                <span class="activity-time">1 hr ago</span>
+              </div>
+            </div>
+            <!-- Event 5 -->
+            <div class="activity-item">
+              <div class="activity-icon" style="background-color:rgba(154, 157, 166, 0.15); color:var(--steel);"><i class="fa-solid fa-truck-ramp-box"></i></div>
+              <div class="activity-details">
+                <p>Parts warehouse order placed: 12 high-tension torsion springs</p>
+                <span class="activity-time">2 hrs ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 6: QUICK ACTIONS PANEL -->
+        <div class="chart-card fade-in show">
+          <h3 class="chart-title">Control Terminal</h3>
+          <div class="action-grid">
+            <div class="action-btn" onclick="alert('Opening scheduler calendar...');">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>Schedule Job</span>
+            </div>
+            <div class="action-btn" onclick="alert('Redirecting to customer forms...');">
+              <i class="fa-solid fa-user-gear"></i>
+              <span>Add Customer</span>
+            </div>
+            <div class="action-btn" onclick="alert('Generating PDF financial statement...');">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+              <span>Download Report</span>
+            </div>
+            <div class="action-btn" onclick="alert('Launching supervisor GPS tracking portal...');">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>View Tech Locations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <i class="fa-solid fa-warehouse"></i> ProLift Garage Doors
+          </div>
+          <p>Serving Phoenix & surrounding areas since 1999. Family owned, locally operated, and built on trust and credibility.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home1.html" class="footer-link">Home1</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">New Installation</a></li>
+            <li><a href="services.html" class="footer-link">Spring Repair</a></li>
+            <li><a href="services.html" class="footer-link">Cable Repair</a></li>
+            <li><a href="services.html" class="footer-link">Opener Install</a></li>
+            <li><a href="services.html" class="footer-link">Tune-Up & Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Phone:</strong><br>
+                (602) 555-0198
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email:</strong><br>
+                info@proliftdoors.com
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Address:</strong><br>
+                Phoenix, AZ 85001
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Hours:</strong><br>
+                Mon–Sat: 7AM–8PM<br>
+                Sun: Emergency Only
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 ProLift Garage Doors. All rights reserved.</div>
+        <div class="footer-rating">
+          <i class="fa-solid fa-star"></i>
+          <span><strong>4.9/5</strong> Google Rating</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

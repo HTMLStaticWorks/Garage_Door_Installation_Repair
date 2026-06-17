@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9F1C" />
+      <stop offset="100%" stop-color="#F77F00" />
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="240" fill="url(#orangeGrad)" />
+  <!-- Warehouse/Garage Door Icon in White -->
+  <path d="M256 110 L110 220 V380 H402 V220 L256 110 Z" fill="none" stroke="#FFFFFF" stroke-width="28" stroke-linejoin="round"/>
+  <!-- Garage horizontal lines (slats) -->
+  <line x1="160" y1="270" x2="352" y2="270" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"/>
+  <line x1="160" y1="315" x2="352" y2="315" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"/>
+  <line x1="160" y1="360" x2="352" y2="360" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"/>
+</svg>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pricing Plans - ProLift Garage Doors</title>
+  <title>Pricing Plans - ProLift</title>
   <meta name="description" content="View our flat-rate pricing models and local membership plans. Save 20% on garage door tuning, priority emergency calls, and warrantied parts.">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,9 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=1.2">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
 
@@ -47,9 +49,9 @@
   <!-- SECTION 1: PRICING HERO -->
   <section class="header-hero" style="background-image: linear-gradient(rgba(28,28,30,0.8), rgba(28,28,30,0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa');">
     <div class="container">
-      <h1 class="fade-in show">Flat-Rate Pricing</h1>
-      <p class="fade-in show">We quote before we start. You approve before we work. Simple.</p>
-      <div class="breadcrumb justify-content-center fade-in show" style="justify-content: center;">
+      <h1 class="fade-in-up">Flat-Rate Pricing</h1>
+      <p class="fade-in-up">We quote before we start. You approve before we work. Simple.</p>
+      <div class="breadcrumb justify-content-center fade-in-up" style="justify-content: center;">
         <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:0.75rem;"></i> <span>Pricing</span>
       </div>
     </div>
@@ -58,7 +60,7 @@
   <!-- SECTION 2: MONTHLY/YEARLY TOGGLE -->
   <section class="section" id="pricing-plans" style="padding-bottom: 0;">
     <div class="container">
-      <div class="switch-container fade-in">
+      <div class="switch-container fade-in-up">
         <span class="switch-label active" id="switch-one-time">One-Time Visit</span>
         <label class="toggle-switch">
           <input type="checkbox" id="pricing-checkbox">
@@ -69,9 +71,9 @@
       </div>
 
       <!-- SECTION 3: PRICING CARDS -->
-      <div class="grid-3">
+      <div class="grid-3 stagger-grid">
         <!-- Plan 1 -->
-        <div class="card pricing-card fade-in">
+        <div class="card pricing-card fade-in-up">
           <div class="pricing-header">
             <h3 class="pricing-title">Basic</h3>
             <div class="pricing-price"><span class="pricing-price-val">$79</span><span class="pricing-period">/visit</span></div>
@@ -86,9 +88,9 @@
           </ul>
           <a href="signup.html?plan=basic" class="btn btn-outline-primary btn-full">Book Now</a>
         </div>
-
+ 
         <!-- Plan 2 (Popular) -->
-        <div class="card pricing-card pricing-popular fade-in">
+        <div class="card pricing-card pricing-popular fade-in-up">
           <span class="popular-badge">Most Popular</span>
           <div class="pricing-header">
             <h3 class="pricing-title">Pro</h3>
@@ -104,9 +106,9 @@
           </ul>
           <a href="signup.html?plan=pro" class="btn btn-primary btn-full">Start Pro Plan</a>
         </div>
-
+ 
         <!-- Plan 3 -->
-        <div class="card pricing-card fade-in">
+        <div class="card pricing-card fade-in-up">
           <div class="pricing-header">
             <h3 class="pricing-title">Elite</h3>
             <div class="pricing-price"><span class="pricing-price-val">$249</span><span class="pricing-period">/visit</span></div>
@@ -133,7 +135,7 @@
         <p class="section-subtitle fade-in">Review the specific service scopes, warranties, and dispatch response speeds.</p>
       </div>
 
-      <div class="table-responsive fade-in">
+      <div class="table-responsive scale-in">
         <table class="comparison-table">
           <thead>
             <tr>
@@ -200,22 +202,40 @@
 
   <!-- SECTION 5: TRUST BADGES -->
   <section class="section section-alt" id="pricing-trust">
-    <div class="container stats-container" style="justify-content: space-around;">
-      <div class="stat-item fade-in" style="min-width: 150px;">
-        <div class="stat-number" style="font-size:2rem;"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-        <div class="stat-label" style="color:var(--text); font-weight:bold;">Flat-Rate Pricing</div>
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Our Promise to You</h2>
+        <p class="section-subtitle fade-in">Every plan comes backed by our core commitments — no surprises, no fine print.</p>
       </div>
-      <div class="stat-item fade-in" style="min-width: 150px;">
-        <div class="stat-number" style="font-size:2rem;"><i class="fa-solid fa-lock"></i></div>
-        <div class="stat-label" style="color:var(--text); font-weight:bold;">No Hidden Fees</div>
-      </div>
-      <div class="stat-item fade-in" style="min-width: 150px;">
-        <div class="stat-number" style="font-size:2rem;"><i class="fa-solid fa-calendar-xmark"></i></div>
-        <div class="stat-label" style="color:var(--text); font-weight:bold;">Cancel Anytime</div>
-      </div>
-      <div class="stat-item fade-in" style="min-width: 150px;">
-        <div class="stat-number" style="font-size:2rem;"><i class="fa-solid fa-user-shield"></i></div>
-        <div class="stat-label" style="color:var(--text); font-weight:bold;">Licensed & Insured</div>
+      <div class="trust-grid stagger-grid">
+        <div class="trust-card scale-in">
+          <div class="trust-icon-wrap">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <h4 class="trust-title">Flat-Rate Pricing</h4>
+          <p class="trust-desc">You get a firm quote upfront. The price we say is the price you pay — always.</p>
+        </div>
+        <div class="trust-card scale-in">
+          <div class="trust-icon-wrap">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <h4 class="trust-title">No Hidden Fees</h4>
+          <p class="trust-desc">No diagnostic surprises. No fuel surcharges. No after-the-fact add-ons, period.</p>
+        </div>
+        <div class="trust-card scale-in">
+          <div class="trust-icon-wrap">
+            <i class="fa-solid fa-calendar-xmark"></i>
+          </div>
+          <h4 class="trust-title">Cancel Anytime</h4>
+          <p class="trust-desc">Membership plans have zero lock-in. Cancel, pause, or upgrade directly from your dashboard.</p>
+        </div>
+        <div class="trust-card scale-in">
+          <div class="trust-icon-wrap">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <h4 class="trust-title">Licensed &amp; Insured</h4>
+          <p class="trust-desc">Every technician is fully licensed, background-checked, and covered by our liability policy.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -279,7 +299,7 @@
       <div class="footer-top">
         <div class="footer-about">
           <div class="footer-logo">
-            <i class="fa-solid fa-warehouse"></i> ProLift Garage Doors
+            <i class="fa-solid fa-warehouse"></i> ProLift
           </div>
           <p>Serving Phoenix & surrounding areas since 1999. Family owned, locally operated, and built on trust and credibility.</p>
           <div class="social-links">
@@ -351,7 +371,7 @@
       </div>
       
       <div class="footer-bottom">
-        <div>&copy; 2026 ProLift Garage Doors. All rights reserved.</div>
+        <div>&copy; 2026 ProLift. All rights reserved.</div>
         <div class="footer-rating">
           <i class="fa-solid fa-star"></i>
           <span><strong>4.9/5</strong> Google Rating</span>

@@ -1,4 +1,4 @@
-// ProLift Garage Doors - Global JavaScript Module
+// ProLift - Global JavaScript Module
 
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
@@ -94,7 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const navbarMenu = document.getElementById('navbar-menu');
 
   if (hamburgerBtn && navbarMenu) {
-    hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       navbarMenu.classList.toggle('open');
       const isOpen = navbarMenu.classList.contains('open');
       hamburgerBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
@@ -494,6 +495,59 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
+  // 11b. LOGIN VALIDATION (login.html)
+  // ==========================================
+  const loginForm = document.getElementById('login-form');
+  if (loginForm) {
+    const emailField = document.getElementById('login-email');
+    const passwordField = document.getElementById('login-password');
+
+    const validateEmail = () => {
+      const val = emailField.value;
+      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+      if (isValid) {
+        emailField.classList.remove('invalid');
+        emailField.classList.add('valid');
+      } else {
+        emailField.classList.remove('valid');
+        emailField.classList.add('invalid');
+      }
+      return isValid;
+    };
+
+    const validatePassword = () => {
+      const val = passwordField.value;
+      const isValid = val.length >= 8;
+      if (isValid) {
+        passwordField.classList.remove('invalid');
+        passwordField.classList.add('valid');
+      } else {
+        passwordField.classList.remove('valid');
+        passwordField.classList.add('invalid');
+      }
+      return isValid;
+    };
+
+    emailField.addEventListener('input', validateEmail);
+    passwordField.addEventListener('input', validatePassword);
+
+    loginForm.addEventListener('submit', (e) => {
+      const isEmailValid = validateEmail();
+      const isPasswordValid = validatePassword();
+
+      if (!isEmailValid || !isPasswordValid) {
+        e.preventDefault();
+        alert('Please enter a valid email and password (minimum 8 characters).');
+      } else {
+        e.preventDefault();
+        // Redirect directly to dashboard
+        window.location.href = 'dashboard.html';
+      }
+    });
+  }
+
+
+  // ==========================================
   // 13. DASHBOARD CLOCK (dashboard.html)
   // ==========================================
   const dbClock = document.getElementById('db-clock');
@@ -520,19 +574,176 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 14. SCROLL ANIMATIONS (Intersection Observer)
+  // 14. SCROLL ANIMATIONS & STAGGER GRIDS
   // ==========================================
-  const fadeElements = document.querySelectorAll('.fade-in');
+  const fadeElements = document.querySelectorAll('.fade-in, .fade-in-up, .fade-in-left, .fade-in-right, .scale-in');
+  
   if (fadeElements.length > 0) {
     const fadeObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          fadeObserver.unobserve(entry.target);
+          const el = entry.target;
+          if (el.classList.contains('show')) return; // Already animated
+
+          const parent = el.parentElement;
+          if (parent && parent.classList.contains('stagger-grid')) {
+            // Find all animatable siblings in the same grid
+            const siblings = Array.from(parent.children).filter(child => 
+              child.classList.contains('fade-in') || 
+              child.classList.contains('fade-in-up') || 
+              child.classList.contains('fade-in-left') || 
+              child.classList.contains('fade-in-right') || 
+              child.classList.contains('scale-in')
+            );
+            
+            // Stagger animation trigger
+            siblings.forEach((sib, index) => {
+              if (!sib.classList.contains('show')) {
+                setTimeout(() => {
+                  sib.classList.add('show');
+                }, index * 120); // 120ms stagger delay
+              }
+              fadeObserver.unobserve(sib);
+            });
+          } else {
+            el.classList.add('show');
+            fadeObserver.unobserve(el);
+          }
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
 
-    fadeElements.forEach(el => fadeObserver.observe(el));
+    // Initial check: filter out hero animations so they don't wait for scroll
+    fadeElements.forEach(el => {
+      // If it's inside a header/hero or top panel, animate it on page load
+      const isHeroElement = el.closest('header') || el.closest('.split-hero-left') || el.closest('.split-hero-right');
+      if (isHeroElement) {
+        setTimeout(() => {
+          el.classList.add('show');
+        }, 150);
+      } else if (!el.classList.contains('show')) {
+        fadeObserver.observe(el);
+      }
+    });
+  }
+
+  // ==========================================
+  // 15. BACK TO TOP BUTTON
+  // ==========================================
+  const backToTopBtn = document.createElement('button');
+  backToTopBtn.id = 'back-to-top';
+  backToTopBtn.className = 'back-to-top';
+  backToTopBtn.setAttribute('aria-label', 'Back to top');
+  backToTopBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+  document.body.appendChild(backToTopBtn);
+
+  const toggleBackToTopBtn = () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  };
+
+  let scrollTimeout;
+  window.addEventListener('scroll', () => {
+    if (!scrollTimeout) {
+      scrollTimeout = setTimeout(() => {
+        toggleBackToTopBtn();
+        scrollTimeout = null;
+      }, 100);
+    }
+  }, { passive: true });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // ==========================================
+  // 15. DASHBOARD SIDEBAR SCROLL SPY & CLICK NAVIGATION
+  // ==========================================
+  const dbSidebarNav = document.querySelector('.db-sidebar-nav');
+  if (dbSidebarNav) {
+    const navItems = dbSidebarNav.querySelectorAll('.db-nav-item');
+    const sections = document.querySelectorAll('#db-overview, #db-jobs, #db-analytics, #db-log');
+    
+    // Smooth scrolling when clicking sidebar links
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        const targetId = item.getAttribute('href');
+        if (targetId.startsWith('#')) {
+          e.preventDefault();
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            // Remove active from all and set on clicked
+            navItems.forEach(nav => nav.classList.remove('active'));
+            item.classList.add('active');
+            
+            // Scroll to the element, account for header height if header is fixed/sticky on mobile
+            const headerOffset = window.innerWidth <= 992 ? 80 : 20;
+            const elementPosition = targetSection.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+
+    // Scroll Spy: Update active link as user scrolls
+    const spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navItems.forEach(item => {
+            if (item.getAttribute('href') === `#${id}`) {
+              item.classList.add('active');
+            } else {
+              item.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, {
+      rootMargin: '-20% 0px -60% 0px' // Triggers active highlight when section is in the middle of the viewport
+    });
+
+    sections.forEach(section => spyObserver.observe(section));
+
+    // Mobile/Tablet Hamburger Toggle
+    const dbHamburgerBtn = document.getElementById('db-hamburger-btn');
+    const dbSidebar = document.querySelector('.db-sidebar');
+    const dbOverlay = document.getElementById('db-overlay');
+
+    if (dbHamburgerBtn && dbSidebar && dbOverlay) {
+      const toggleSidebar = (e) => {
+        if (e) e.stopPropagation();
+        dbSidebar.classList.toggle('open');
+        dbOverlay.classList.toggle('active');
+        const isOpen = dbSidebar.classList.contains('open');
+        dbHamburgerBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+      };
+
+      dbHamburgerBtn.addEventListener('click', toggleSidebar);
+      dbOverlay.addEventListener('click', toggleSidebar);
+
+      // Close sidebar when clicking links on mobile
+      navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          if (window.innerWidth <= 992) {
+            dbSidebar.classList.remove('open');
+            dbOverlay.classList.remove('active');
+            dbHamburgerBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          }
+        });
+      });
+    }
   }
 });
+

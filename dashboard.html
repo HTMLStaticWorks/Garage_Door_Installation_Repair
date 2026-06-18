@@ -40,7 +40,15 @@
           <i class="fa-solid fa-file-invoice-dollar"></i> <span>Operations Log</span>
         </a>
       </nav>
-      <div class="db-sidebar-footer">
+      <div class="db-sidebar-footer" style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; justify-content: space-around;">
+          <button class="control-btn" id="theme-toggle" aria-label="Toggle dark theme" style="background: transparent; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-input); padding: 6px 12px; cursor: pointer; color: var(--white); font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-moon"></i> <span>Dark</span>
+          </button>
+          <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL direction" style="background: transparent; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-input); padding: 6px 12px; cursor: pointer; color: var(--white); font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-globe"></i> <span>RTL</span>
+          </button>
+        </div>
         <a href="index.html" class="db-nav-item logout">
           <i class="fa-solid fa-right-from-bracket"></i> <span>Log Out</span>
         </a>
@@ -73,12 +81,14 @@
         <button class="btn btn-secondary" onclick="alert('Adding customer account...');" style="padding: 6px 16px; font-size:0.85rem; border-radius:var(--radius-input); background-color:rgba(255,255,255,0.08); border-color:var(--border);">
           <i class="fa-solid fa-user-plus"></i> Add Customer
         </button>
-        <button class="control-btn" id="theme-toggle" aria-label="Toggle dark theme" style="background: transparent; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-input); padding: 6px 12px; cursor: pointer; color: var(--white); font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
-          <i class="fa-solid fa-moon"></i> <span>Dark</span>
-        </button>
-        <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL direction" style="background: transparent; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-input); padding: 6px 12px; cursor: pointer; color: var(--white); font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
-          <i class="fa-solid fa-globe"></i> <span>RTL</span>
-        </button>
+        <div class="db-profile" style="display: flex; align-items: center; gap: 10px; margin-left: var(--space); cursor: pointer; padding: 4px 8px; border-radius: var(--radius-input); transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.05)'" onmouseout="this.style.backgroundColor='transparent'" onclick="alert('Opening profile menu...');">
+          <img src="https://ui-avatars.com/api/?name=Admin&background=E63946&color=fff" alt="Admin Profile" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.1);">
+          <div style="display: flex; flex-direction: column; line-height: 1.2;">
+            <span style="font-size: 0.85rem; font-weight: bold; color: var(--white);">Admin</span>
+            <span style="font-size: 0.7rem; color: var(--gray);">Supervisor</span>
+          </div>
+          <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: var(--gray); margin-left: 4px;"></i>
+        </div>
       </div>
     </div>
   </div>

@@ -57,7 +57,12 @@
           <!-- Password -->
           <div class="form-group">
             <label class="form-label" for="login-password">Password</label>
-            <input type="password" id="login-password" class="form-input" placeholder="••••••••" required>
+            <div style="position: relative;">
+              <input type="password" id="login-password" class="form-input" placeholder="••••••••" required style="padding-right: 40px;">
+              <button type="button" class="password-toggle" onclick="const input = document.getElementById('login-password'); const icon = this.querySelector('i'); if (input.type === 'password') { input.type = 'text'; icon.classList.remove('fa-eye'); icon.classList.add('fa-eye-slash'); } else { input.type = 'password'; icon.classList.remove('fa-eye-slash'); icon.classList.add('fa-eye'); }" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--gray); cursor: pointer; padding: 0;">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
             <span class="form-error">Password must be at least 8 characters long.</span>
           </div>
 

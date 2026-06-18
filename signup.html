@@ -95,7 +95,12 @@
           <!-- Password -->
           <div class="form-group">
             <label class="form-label" for="password">Password</label>
-            <input type="password" id="password" class="form-input" placeholder="Min 8 characters" required>
+            <div style="position: relative;">
+              <input type="password" id="password" class="form-input" placeholder="Min 8 characters" required style="padding-right: 40px;">
+              <button type="button" class="password-toggle" onclick="const input = document.getElementById('password'); const icon = this.querySelector('i'); if (input.type === 'password') { input.type = 'text'; icon.classList.remove('fa-eye'); icon.classList.add('fa-eye-slash'); } else { input.type = 'password'; icon.classList.remove('fa-eye-slash'); icon.classList.add('fa-eye'); }" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--gray); cursor: pointer; padding: 0;">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
             <span class="form-error">Password must be at least 8 characters long.</span>
             <div class="strength-meter">
               <div class="strength-bar" id="strength-bar"></div>
@@ -106,7 +111,12 @@
           <!-- Confirm Password -->
           <div class="form-group">
             <label class="form-label" for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" class="form-input" placeholder="Re-enter password" required>
+            <div style="position: relative;">
+              <input type="password" id="confirm-password" class="form-input" placeholder="Re-enter password" required style="padding-right: 40px;">
+              <button type="button" class="password-toggle" onclick="const input = document.getElementById('confirm-password'); const icon = this.querySelector('i'); if (input.type === 'password') { input.type = 'text'; icon.classList.remove('fa-eye'); icon.classList.add('fa-eye-slash'); } else { input.type = 'password'; icon.classList.remove('fa-eye-slash'); icon.classList.add('fa-eye'); }" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--gray); cursor: pointer; padding: 0;">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
             <span class="form-error">Passwords must match.</span>
           </div>
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
 
 /* --- DESIGN SYSTEM VARIABLES --- */
 :root {
@@ -989,11 +989,13 @@ html[dir="rtl"] .slider-btn-next { right: auto; left: 10px; }
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: calc(var(--space) * 2);
   padding: calc(var(--space) * 2);
   background-color: var(--light-bg);
   border-radius: var(--radius-input);
   border: 1px solid var(--border);
   transition: transform var(--transition-speed);
+  min-width: 0;
 }
 
 .tracker-item:hover {
@@ -1004,11 +1006,14 @@ html[dir="rtl"] .slider-btn-next { right: auto; left: 10px; }
   display: flex;
   align-items: center;
   gap: calc(var(--space) * 1.5);
+  min-width: 0;
+  flex: 1;
 }
 
 .tech-avatar {
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
   border-radius: 50%;
   background-color: var(--steel);
   color: var(--white);
@@ -1018,15 +1023,27 @@ html[dir="rtl"] .slider-btn-next { right: auto; left: 10px; }
   font-weight: bold;
 }
 
+.tech-details {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
 .tech-details h4 {
   font-size: 0.95rem;
   font-family: var(--font-body);
   text-transform: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tech-details p {
   font-size: 0.8rem;
   color: var(--gray);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .status-badge {
@@ -1043,6 +1060,21 @@ html[dir="rtl"] .slider-btn-next { right: auto; left: 10px; }
   line-height: 1;
   flex-shrink: 0;
   min-width: 90px;
+}
+
+@media (max-width: 480px) {
+  .tracker-item {
+    flex-wrap: wrap;
+    gap: calc(var(--space) * 1.5);
+  }
+  .tech-info {
+    flex: 1 1 100%;
+  }
+  .status-badge {
+    align-self: flex-start;
+    margin-left: calc(40px + calc(var(--space) * 1.5));
+    min-width: unset;
+  }
 }
 
 .status-available { background-color: rgba(46, 204, 113, 0.15); color: #2ecc71; border: 1px solid #2ecc71; }
@@ -3126,7 +3158,7 @@ html[dir="rtl"] .diag-tab-btn {
   border-top: 1px solid var(--border);
   padding-top: calc(var(--space) * 3);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 @media (max-width: 992px) {

@@ -25,7 +25,7 @@
       </a>
       <ul class="navbar-menu" id="navbar-menu">
         <li><a href="index.html" class="navbar-link" id="link-home">Home</a></li>
-        <li><a href="home1.html" class="navbar-link" id="link-home1">Home1</a></li>
+        <li><a href="home1.html" class="navbar-link" id="link-home1">HOME 2</a></li>
         <li><a href="about.html" class="navbar-link" id="link-about">About</a></li>
         <li><a href="services.html" class="navbar-link" id="link-services">Services</a></li>
         <li><a href="pricing.html" class="navbar-link" id="link-pricing">Pricing</a></li>
@@ -154,7 +154,137 @@
     </div>
   </section>
 
-  <!-- SECTION 5: TESTIMONIALS SLIDER -->
+  <!-- SECTION 5: INTERACTIVE DIAGNOSTIC CENTER -->
+  <section class="section section-alt" id="diagnostics">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Interactive Diagnostic Center</h2>
+        <p class="section-subtitle fade-in">Click on any common garage door issue below to identify potential risks and get recommended solutions instantly.</p>
+      </div>
+
+      <div class="diagnostics-layout scale-in">
+        <!-- Tabs List -->
+        <div class="diag-tabs">
+          <button class="diag-tab-btn active" data-target="spring" aria-label="Diagnose Broken Springs">
+            <span class="tab-icon"><i class="fa-solid fa-gears"></i></span>
+            <span class="tab-label">
+              <span class="tab-title">Broken Springs</span>
+              <span class="tab-desc">Door feels extremely heavy</span>
+            </span>
+          </button>
+          
+          <button class="diag-tab-btn" data-target="track" aria-label="Diagnose Off-Track Roller">
+            <span class="tab-icon"><i class="fa-solid fa-circle-nodes"></i></span>
+            <span class="tab-label">
+              <span class="tab-title">Off-Track Roller</span>
+              <span class="tab-desc">Door is crooked or shaking</span>
+            </span>
+          </button>
+
+          <button class="diag-tab-btn" data-target="opener" aria-label="Diagnose Opener Failures">
+            <span class="tab-icon"><i class="fa-solid fa-wifi"></i></span>
+            <span class="tab-label">
+              <span class="tab-title">Opener Failures</span>
+              <span class="tab-desc">Motor runs but no movement</span>
+            </span>
+          </button>
+
+          <button class="diag-tab-btn" data-target="noise" aria-label="Diagnose Noisy Operation">
+            <span class="tab-icon"><i class="fa-solid fa-oil-can"></i></span>
+            <span class="tab-label">
+              <span class="tab-title">Noisy Operation</span>
+              <span class="tab-desc">Loud squeaks or grinding sounds</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Detail Cards -->
+        <div class="diag-content-panel">
+          <!-- Spring Card -->
+          <div class="diag-detail-card active" id="diag-card-spring">
+            <div class="diag-card-header">
+              <h3 class="diag-card-title">Broken Torsion Springs</h3>
+              <span class="risk-badge risk-danger">Danger - High Tension</span>
+            </div>
+            <div class="diag-card-body">
+              <p>Your garage door torsion springs balance the weight of the door. When a spring snaps (often accompanied by a loud bang), the door loses all support, making it dangerous or impossible to open.</p>
+              <h4 class="diag-steps-title">Recommended Safety Steps:</h4>
+              <ul class="diag-steps">
+                <li class="diag-step-item"><i class="fa-solid fa-triangle-exclamation"></i> <span><strong>Do Not Attempt to Lift:</strong> Trying to open a door manually or with an opener when a spring is broken can burn out the motor or cause serious injury.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-info"></i> <span><strong>Clear the Area:</strong> Keep children and pets away from the door under tension.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-check"></i> <span><strong>Replace in Pairs:</strong> Since both springs experience identical wear, we recommend replacing both simultaneously to prevent a second failure soon after.</span></li>
+              </ul>
+            </div>
+            <div class="diag-card-footer">
+              <a href="signup.html" class="btn btn-primary" id="btn-diag-spring"><i class="fa-solid fa-screwdriver-wrench"></i> Book Spring Replacement</a>
+            </div>
+          </div>
+
+          <!-- Track Card -->
+          <div class="diag-detail-card" id="diag-card-track">
+            <div class="diag-card-header">
+              <h3 class="diag-card-title">Off-Track & Crooked Rollers</h3>
+              <span class="risk-badge risk-warning">Warning - High Risk</span>
+            </div>
+            <div class="diag-card-body">
+              <p>If the door becomes crooked or jumps its tracks, it indicates that a roller has popped out or a lift cable has snapped. Attempting to force the door closed can bend the track or cause the door to fall.</p>
+              <h4 class="diag-steps-title">Recommended Safety Steps:</h4>
+              <ul class="diag-steps">
+                <li class="diag-step-item"><i class="fa-solid fa-triangle-exclamation"></i> <span><strong>Stop Operation:</strong> Do not activate the automatic opener. This will prevent twisting the tracks further.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-info"></i> <span><strong>Visually Inspect:</strong> Check if any rollers are fully out of the track channels.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-check"></i> <span><strong>Call for Realignment:</strong> Professional tools are required to reset the heavy cables under tension and re-align the tracking frames safely.</span></li>
+              </ul>
+            </div>
+            <div class="diag-card-footer">
+              <a href="signup.html" class="btn btn-primary" id="btn-diag-track"><i class="fa-solid fa-screwdriver-wrench"></i> Book Track Realignment</a>
+            </div>
+          </div>
+
+          <!-- Opener Card -->
+          <div class="diag-detail-card" id="diag-card-opener">
+            <div class="diag-card-header">
+              <h3 class="diag-card-title">Opener Motor Malfunction</h3>
+              <span class="risk-badge risk-warning">Warning - Moderate Risk</span>
+            </div>
+            <div class="diag-card-body">
+              <p>When the motor hums but the door fails to move, the internal nylon gears may be stripped, or the travel limits need recalibration. If the opener is completely unresponsive, check the power source and remote batteries first.</p>
+              <h4 class="diag-steps-title">Recommended Safety Steps:</h4>
+              <ul class="diag-steps">
+                <li class="diag-step-item"><i class="fa-solid fa-battery-half"></i> <span><strong>Check Remote & Sensors:</strong> Ensure the safety eye-sensors at the bottom of the tracks are aligned and the lenses are clean.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-hand"></i> <span><strong>Use Emergency Release:</strong> Pull the red emergency cord to disconnect the carriage. Test if the door lifts easily by hand to check for mechanical blockages.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-check"></i> <span><strong>Upgrade to Smart Opener:</strong> If your opener is over 15 years old, consider upgrading to a modern belt-drive unit with WiFi and backup battery capabilities.</span></li>
+              </ul>
+            </div>
+            <div class="diag-card-footer">
+              <a href="signup.html" class="btn btn-primary" id="btn-diag-opener"><i class="fa-solid fa-screwdriver-wrench"></i> Book Motor Diagnosis</a>
+            </div>
+          </div>
+
+          <!-- Noise Card -->
+          <div class="diag-detail-card" id="diag-card-noise">
+            <div class="diag-card-header">
+              <h3 class="diag-card-title">Noisy Squeaks & Grinding</h3>
+              <span class="risk-badge risk-low">Low Risk - Maintenance Alert</span>
+            </div>
+            <div class="diag-card-body">
+              <p>Loud squeaks, squeals, or grinding sounds occur when moving steel components lack proper lubrication or when rollers are worn down. Ignoring these sounds puts excessive strain on the garage opener motor.</p>
+              <h4 class="diag-steps-title">Recommended Safety Steps:</h4>
+              <ul class="diag-steps">
+                <li class="diag-step-item"><i class="fa-solid fa-oil-can"></i> <span><strong>Do Not Use WD-40:</strong> Avoid standard degreasers. Use specialized silicone or lithium-based garage door lubricants on hinges, rollers, and springs.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-info"></i> <span><strong>Check Roller Wear:</strong> If you have steel rollers, upgrading to nylon rollers will reduce operating noise by up to 75%.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-check"></i> <span><strong>Schedule a Tune-Up:</strong> A full 20-point inspection will tighten loose hinges, balance the spring tension, and ensure quiet, smooth travel.</span></li>
+              </ul>
+            </div>
+            <div class="diag-card-footer">
+              <a href="signup.html" class="btn btn-primary" id="btn-diag-noise"><i class="fa-solid fa-screwdriver-wrench"></i> Book a Tune-Up Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: TESTIMONIALS SLIDER -->
   <section class="section" id="testimonials">
     <div class="container">
       <div class="text-center">
@@ -266,7 +396,7 @@
           <h3 class="footer-title">Quick Links</h3>
           <ul class="footer-links">
             <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="home1.html" class="footer-link">Home1</a></li>
+            <li><a href="home1.html" class="footer-link">HOME 2</a></li>
             <li><a href="about.html" class="footer-link">About Us</a></li>
             <li><a href="services.html" class="footer-link">Services</a></li>
             <li><a href="pricing.html" class="footer-link">Pricing</a></li>

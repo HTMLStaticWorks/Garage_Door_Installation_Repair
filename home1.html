@@ -162,135 +162,259 @@
     </div>
   </section>
 
-  <!-- SECTION 5: INTERACTIVE DIAGNOSTIC CENTER -->
-  <section class="section section-alt" id="diagnostics">
+  <!-- SECTION 5: INSTANT PRICE ESTIMATOR -->
+  <section class="section section-alt" id="price-estimator">
     <div class="container">
       <div class="text-center">
-        <h2 class="section-title fade-in">Interactive Diagnostic Center</h2>
-        <p class="section-subtitle fade-in">Click on any common garage door issue below to identify potential risks and get recommended solutions instantly.</p>
+        <h2 class="section-title fade-in">Instant Price Estimator</h2>
+        <p class="section-subtitle fade-in">Select your service type and door details below to get an instant ballpark estimate — no obligation, no hidden fees.</p>
       </div>
 
-      <div class="diagnostics-layout scale-in">
-        <!-- Tabs List -->
-        <div class="diag-tabs">
-          <button class="diag-tab-btn active" data-target="spring" aria-label="Diagnose Broken Springs">
-            <span class="tab-icon"><i class="fa-solid fa-gears"></i></span>
-            <span class="tab-label">
-              <span class="tab-title">Broken Springs</span>
-              <span class="tab-desc">Door feels extremely heavy</span>
-            </span>
-          </button>
-          
-          <button class="diag-tab-btn" data-target="track" aria-label="Diagnose Off-Track Roller">
-            <span class="tab-icon"><i class="fa-solid fa-circle-nodes"></i></span>
-            <span class="tab-label">
-              <span class="tab-title">Off-Track Roller</span>
-              <span class="tab-desc">Door is crooked or shaking</span>
-            </span>
-          </button>
+      <div class="estimator-layout scale-in">
+        <!-- Left: Controls -->
+        <div class="estimator-controls">
 
-          <button class="diag-tab-btn" data-target="opener" aria-label="Diagnose Opener Failures">
-            <span class="tab-icon"><i class="fa-solid fa-wifi"></i></span>
-            <span class="tab-label">
-              <span class="tab-title">Opener Failures</span>
-              <span class="tab-desc">Motor runs but no movement</span>
-            </span>
-          </button>
+          <div class="estimator-group">
+            <label class="estimator-label"><i class="fa-solid fa-screwdriver-wrench"></i> Service Type</label>
+            <div class="estimator-options" id="est-service">
+              <button class="est-option active" data-value="spring" data-base="180">Spring Replacement</button>
+              <button class="est-option" data-value="cable" data-base="140">Cable Repair</button>
+              <button class="est-option" data-value="opener" data-base="220">Opener Install</button>
+              <button class="est-option" data-value="install" data-base="850">New Door Install</button>
+              <button class="est-option" data-value="tune" data-base="89">Tune-Up &amp; Lube</button>
+              <button class="est-option" data-value="track" data-base="160">Track Realignment</button>
+            </div>
+          </div>
 
-          <button class="diag-tab-btn" data-target="noise" aria-label="Diagnose Noisy Operation">
-            <span class="tab-icon"><i class="fa-solid fa-oil-can"></i></span>
-            <span class="tab-label">
-              <span class="tab-title">Noisy Operation</span>
-              <span class="tab-desc">Loud squeaks or grinding sounds</span>
-            </span>
-          </button>
+          <div class="estimator-group">
+            <label class="estimator-label"><i class="fa-solid fa-ruler-combined"></i> Door Size</label>
+            <div class="estimator-options" id="est-size">
+              <button class="est-option active" data-value="single" data-mult="1.0">Single Car (8×7 ft)</button>
+              <button class="est-option" data-value="double" data-mult="1.6">Double Car (16×7 ft)</button>
+              <button class="est-option" data-value="rv" data-mult="2.1">RV / Oversized</button>
+            </div>
+          </div>
+
+          <div class="estimator-group">
+            <label class="estimator-label"><i class="fa-solid fa-star"></i> Material / Grade</label>
+            <div class="estimator-options" id="est-grade">
+              <button class="est-option active" data-value="standard" data-add="0">Standard Steel</button>
+              <button class="est-option" data-value="insulated" data-add="120">Insulated Steel</button>
+              <button class="est-option" data-value="premium" data-add="280">Premium Carriage</button>
+            </div>
+          </div>
+
+          <div class="estimator-group">
+            <label class="estimator-label"><i class="fa-solid fa-bolt"></i> Urgency</label>
+            <div class="estimator-options" id="est-urgency">
+              <button class="est-option active" data-value="scheduled" data-add="0">Scheduled Visit</button>
+              <button class="est-option" data-value="sameday" data-add="40">Same-Day Service</button>
+              <button class="est-option" data-value="emergency" data-add="90">24/7 Emergency</button>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Detail Cards -->
-        <div class="diag-content-panel">
-          <!-- Spring Card -->
-          <div class="diag-detail-card active" id="diag-card-spring">
-            <div class="diag-card-header">
-              <h3 class="diag-card-title">Broken Torsion Springs</h3>
-              <span class="risk-badge risk-danger">Danger - High Tension</span>
+        <!-- Right: Result Display -->
+        <div class="estimator-result-panel">
+          <div class="estimator-result-card">
+            <div class="result-service-name" id="result-service-name">Spring Replacement</div>
+            <div class="result-price-label">Estimated Cost Range</div>
+            <div class="result-price" id="result-price">
+              <span class="price-low" id="price-low">$180</span>
+              <span class="price-sep">–</span>
+              <span class="price-high" id="price-high">$240</span>
             </div>
-            <div class="diag-card-body">
-              <p>Your garage door torsion springs balance the weight of the door. When a spring snaps (often accompanied by a loud bang), the door loses all support, making it dangerous or impossible to open.</p>
-              <h4 class="diag-steps-title">Recommended Safety Steps:</h4>
-              <ul class="diag-steps">
-                <li class="diag-step-item"><i class="fa-solid fa-triangle-exclamation"></i> <span><strong>Do Not Attempt to Lift:</strong> Trying to open a door manually or with an opener when a spring is broken can burn out the motor or cause serious injury.</span></li>
-                <li class="diag-step-item"><i class="fa-solid fa-circle-info"></i> <span><strong>Clear the Area:</strong> Keep children and pets away from the door under tension.</span></li>
-                <li class="diag-step-item"><i class="fa-solid fa-circle-check"></i> <span><strong>Replace in Pairs:</strong> Since both springs experience identical wear, we recommend replacing both simultaneously to prevent a second failure soon after.</span></li>
-              </ul>
+            <div class="result-note">
+              <i class="fa-solid fa-circle-info"></i>
+              Final price confirmed on-site after inspection. Parts &amp; labor included.
             </div>
-            <div class="diag-card-footer">
-              <a href="signup.html" class="btn btn-primary" id="btn-diag-spring"><i class="fa-solid fa-screwdriver-wrench"></i> Book Spring Replacement</a>
-            </div>
+            <ul class="result-includes" id="result-includes">
+              <li><i class="fa-solid fa-circle-check"></i> Free on-site diagnosis</li>
+              <li><i class="fa-solid fa-circle-check"></i> Flat-rate quote before work begins</li>
+              <li><i class="fa-solid fa-circle-check"></i> Licensed &amp; insured technician</li>
+              <li><i class="fa-solid fa-circle-check"></i> 90-day parts warranty</li>
+            </ul>
+            <a href="signup.html" class="btn btn-primary" id="btn-get-estimate" style="width:100%; text-align:center; margin-top: calc(var(--space)*3);">
+              <i class="fa-solid fa-calendar-check"></i> Book &amp; Lock In This Rate
+            </a>
           </div>
 
-          <!-- Track Card -->
-          <div class="diag-detail-card" id="diag-card-track">
-            <div class="diag-card-header">
-              <h3 class="diag-card-title">Off-Track & Crooked Rollers</h3>
-              <span class="risk-badge risk-warning">Warning - High Risk</span>
-            </div>
-            <div class="diag-card-body">
-              <p>If the door becomes crooked or jumps its tracks, it indicates that a roller has popped out or a lift cable has snapped. Attempting to force the door closed can bend the track or cause the door to fall.</p>
-              <h4 class="diag-steps-title">Recommended Safety Steps:</h4>
-              <ul class="diag-steps">
-                <li class="diag-step-item"><i class="fa-solid fa-triangle-exclamation"></i> <span><strong>Stop Operation:</strong> Do not activate the automatic opener. This will prevent twisting the tracks further.</span></li>
-                <li class="diag-step-item"><i class="fa-solid fa-circle-info"></i> <span><strong>Visually Inspect:</strong> Check if any rollers are fully out of the track channels.</span></li>
-                <li class="diag-step-item"><i class="fa-solid fa-circle-check"></i> <span><strong>Call for Realignment:</strong> Professional tools are required to reset the heavy cables under tension and re-align the tracking frames safely.</span></li>
-              </ul>
-            </div>
-            <div class="diag-card-footer">
-              <a href="signup.html" class="btn btn-primary" id="btn-diag-track"><i class="fa-solid fa-screwdriver-wrench"></i> Book Track Realignment</a>
-            </div>
-          </div>
-
-          <!-- Opener Card -->
-          <div class="diag-detail-card" id="diag-card-opener">
-            <div class="diag-card-header">
-              <h3 class="diag-card-title">Opener Motor Malfunction</h3>
-              <span class="risk-badge risk-warning">Warning - Moderate Risk</span>
-            </div>
-            <div class="diag-card-body">
-              <p>When the motor hums but the door fails to move, the internal nylon gears may be stripped, or the travel limits need recalibration. If the opener is completely unresponsive, check the power source and remote batteries first.</p>
-              <h4 class="diag-steps-title">Recommended Safety Steps:</h4>
-              <ul class="diag-steps">
-                <li class="diag-step-item"><i class="fa-solid fa-battery-half"></i> <span><strong>Check Remote & Sensors:</strong> Ensure the safety eye-sensors at the bottom of the tracks are aligned and the lenses are clean.</span></li>
-                <li class="diag-step-item"><i class="fa-solid fa-hand"></i> <span><strong>Use Emergency Release:</strong> Pull the red emergency cord to disconnect the carriage. Test if the door lifts easily by hand to check for mechanical blockages.</span></li>
-                <li class="diag-step-item"><i class="fa-solid fa-circle-check"></i> <span><strong>Upgrade to Smart Opener:</strong> If your opener is over 15 years old, consider upgrading to a modern belt-drive unit with WiFi and backup battery capabilities.</span></li>
-              </ul>
-            </div>
-            <div class="diag-card-footer">
-              <a href="signup.html" class="btn btn-primary" id="btn-diag-opener"><i class="fa-solid fa-screwdriver-wrench"></i> Book Motor Diagnosis</a>
-            </div>
-          </div>
-
-          <!-- Noise Card -->
-          <div class="diag-detail-card" id="diag-card-noise">
-            <div class="diag-card-header">
-              <h3 class="diag-card-title">Noisy Squeaks & Grinding</h3>
-              <span class="risk-badge risk-low">Low Risk - Maintenance Alert</span>
-            </div>
-            <div class="diag-card-body">
-              <p>Loud squeaks, squeals, or grinding sounds occur when moving steel components lack proper lubrication or when rollers are worn down. Ignoring these sounds puts excessive strain on the garage opener motor.</p>
-              <h4 class="diag-steps-title">Recommended Safety Steps:</h4>
-              <ul class="diag-steps">
-                <li class="diag-step-item"><i class="fa-solid fa-oil-can"></i> <span><strong>Do Not Use WD-40:</strong> Avoid standard degreasers. Use specialized silicone or lithium-based garage door lubricants on hinges, rollers, and springs.</span></li>
-                <li class="diag-step-item"><i class="fa-solid fa-circle-info"></i> <span><strong>Check Roller Wear:</strong> If you have steel rollers, upgrading to nylon rollers will reduce operating noise by up to 75%.</span></li>
-                <li class="diag-step-item"><i class="fa-solid fa-circle-check"></i> <span><strong>Schedule a Tune-Up:</strong> A full 20-point inspection will tighten loose hinges, balance the spring tension, and ensure quiet, smooth travel.</span></li>
-              </ul>
-            </div>
-            <div class="diag-card-footer">
-              <a href="signup.html" class="btn btn-primary" id="btn-diag-noise"><i class="fa-solid fa-screwdriver-wrench"></i> Book a Tune-Up Visit</a>
-            </div>
+          <div class="estimator-disclaimer">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Price-match guarantee — if you find a lower quote from a licensed competitor, we'll beat it.</span>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <style>
+    /* ===== PRICE ESTIMATOR SECTION ===== */
+    .estimator-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: calc(var(--space) * 6);
+      align-items: start;
+      margin-top: calc(var(--space) * 6);
+    }
+    @media (max-width: 900px) {
+      .estimator-layout { grid-template-columns: 1fr; }
+    }
+    .estimator-controls { display: flex; flex-direction: column; gap: calc(var(--space) * 5); }
+    .estimator-group { display: flex; flex-direction: column; gap: calc(var(--space) * 2); }
+    .estimator-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .estimator-label i { color: var(--primary); }
+    .estimator-options { display: flex; flex-wrap: wrap; gap: calc(var(--space) * 1.5); }
+    .est-option {
+      padding: 10px 18px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+      color: var(--charcoal);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.22s ease;
+    }
+    .est-option:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .est-option.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(240,100,0,0.35);
+    }
+
+    /* Result Panel */
+    .estimator-result-panel { display: flex; flex-direction: column; gap: calc(var(--space)*3); }
+    .estimator-result-card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 20px;
+      padding: calc(var(--space)*5);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 100px;
+    }
+    .result-service-name {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      margin-bottom: calc(var(--space)*1.5);
+    }
+    .result-price-label {
+      font-size: 0.8rem;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: calc(var(--space)*1.5);
+    }
+    .result-price {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: calc(var(--space)*3);
+    }
+    .price-low, .price-high {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--charcoal);
+      line-height: 1;
+      transition: all 0.35s ease;
+    }
+    .price-sep { font-size: 1.5rem; color: var(--gray); font-weight: 300; }
+    .result-note {
+      background: #fff8f0;
+      border-left: 3px solid var(--primary);
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 0.84rem;
+      color: var(--gray);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: calc(var(--space)*3);
+    }
+    .result-note i { color: var(--primary); flex-shrink: 0; margin-top: 2px; }
+    .result-includes { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .result-includes li {
+      font-size: 0.88rem;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .result-includes li i { color: #22c55e; }
+    .estimator-disclaimer {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 0.82rem;
+      color: var(--gray);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .estimator-disclaimer i { color: var(--primary); font-size: 1.1rem; flex-shrink: 0; }
+  </style>
+
+  <script>
+    (function() {
+      const serviceData = {
+        spring:  { name: "Spring Replacement",   base: 180, spread: 60 },
+        cable:   { name: "Cable Repair",          base: 140, spread: 50 },
+        opener:  { name: "Opener Installation",   base: 220, spread: 80 },
+        install: { name: "New Door Installation", base: 850, spread: 300 },
+        tune:    { name: "Tune-Up & Lubrication", base: 89,  spread: 30 },
+        track:   { name: "Track Realignment",     base: 160, spread: 55 },
+      };
+
+      let selectedService = 'spring';
+      let selectedMult    = 1.0;
+      let selectedGradeAdd = 0;
+      let selectedUrgencyAdd = 0;
+
+      function updateEstimate() {
+        const svc = serviceData[selectedService];
+        const low  = Math.round((svc.base + selectedGradeAdd + selectedUrgencyAdd) * selectedMult);
+        const high = Math.round((svc.base + svc.spread + selectedGradeAdd + selectedUrgencyAdd) * selectedMult);
+        document.getElementById('result-service-name').textContent = svc.name;
+        document.getElementById('price-low').textContent  = '$' + low.toLocaleString();
+        document.getElementById('price-high').textContent = '$' + high.toLocaleString();
+      }
+
+      function wireGroup(groupId, handler) {
+        document.getElementById(groupId).querySelectorAll('.est-option').forEach(btn => {
+          btn.addEventListener('click', () => {
+            document.getElementById(groupId).querySelectorAll('.est-option').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            handler(btn);
+            updateEstimate();
+          });
+        });
+      }
+
+      wireGroup('est-service',  btn => { selectedService = btn.dataset.value; });
+      wireGroup('est-size',     btn => { selectedMult    = parseFloat(btn.dataset.mult); });
+      wireGroup('est-grade',    btn => { selectedGradeAdd = parseInt(btn.dataset.add); });
+      wireGroup('est-urgency',  btn => { selectedUrgencyAdd = parseInt(btn.dataset.add); });
+    })();
+  </script>
 
   <!-- SECTION 6: LIVE DISPATCH HUB -->
   <section class="section" id="live-dispatch">

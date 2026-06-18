@@ -745,5 +745,33 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // ==========================================
+  // 16. INTERACTIVE DIAGNOSTIC CENTER TAB CONTROLS
+  // ==========================================
+  const diagTabBtns = document.querySelectorAll('.diag-tab-btn');
+  const diagDetailCards = document.querySelectorAll('.diag-detail-card');
+
+  if (diagTabBtns.length > 0 && diagDetailCards.length > 0) {
+    diagTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+
+        // Deactivate all buttons
+        diagTabBtns.forEach(b => b.classList.remove('active'));
+        // Deactivate all cards
+        diagDetailCards.forEach(c => c.classList.remove('active'));
+
+        // Activate clicked button
+        btn.classList.add('active');
+        // Activate corresponding card
+        const targetCard = document.getElementById(`diag-card-${target}`);
+        if (targetCard) {
+          targetCard.classList.add('active');
+        }
+      });
+    });
+  }
 });
+
 

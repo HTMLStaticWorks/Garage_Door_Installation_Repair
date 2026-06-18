@@ -9,7 +9,7 @@
   --steel:          #4A4E69;
   --light-bg:       #F5F5F0;
   --white:          #FFFFFF;
-  --gray:           #9A9DA6;
+  --gray:           #46474e;       /* Darker gray for better contrast in light mode */
   --text:           #1C1C1E;
   --bg:             #F5F5F0;
   --card-bg:        #FFFFFF;
@@ -33,6 +33,7 @@ body.dark {
   --card-bg:  #1C1C1E;
   --border:   #2C2C2E;
   --light-bg: #1C1C1E;
+  --gray:     #9A9DA6;       /* Original lighter gray for dark mode */
   --shadow:   0 8px 30px rgba(0,0,0,0.4);
 }
 
@@ -2100,6 +2101,21 @@ html[dir="rtl"] .activity-item::before {
   .split-hero-left {
     padding: calc(var(--space) * 6) calc(var(--space) * 4);
     text-align: center;
+  }
+  .split-hero-right {
+    padding: calc(var(--space) * 6) calc(var(--space) * 4);
+  }
+}
+
+@media (max-width: 576px) {
+  .split-hero-right {
+    padding: calc(var(--space) * 4) calc(var(--space) * 2);
+  }
+  .signup-card {
+    padding: calc(var(--space) * 3);
+  }
+  .social-grid {
+    grid-template-columns: 1fr !important;
   }
 }
 

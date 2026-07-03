@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans - ProLift</title>
+  <meta name="description" content="View our flat-rate pricing models and local membership plans. Save 20% on garage door tuning, priority emergency calls, and warrantied parts.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css?v=1.2">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="main-navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" id="nav-logo">
+        <i class="fa-solid fa-warehouse"></i> ProLift
+      </a>
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="index.html" class="navbar-link" id="link-home">Home</a></li>
+        <li><a href="home1.html" class="navbar-link" id="link-home1">HOME 2</a></li>
+        <li><a href="about.html" class="navbar-link" id="link-about">About</a></li>
+        <li><a href="services.html" class="navbar-link" id="link-services">Services</a></li>
+        <li><a href="pricing.html" class="navbar-link" id="link-pricing">Pricing</a></li>
+        <li><a href="dashboard.html" class="navbar-link" id="link-dashboard">Dashboard</a></li>
+        <li><a href="contact.html" class="navbar-link" id="link-contact">Contact</a></li>
+        <li class="mobile-controls" style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 0;">
+          <button class="control-btn" id="theme-toggle" aria-label="Toggle dark theme">
+            <i class="fa-solid fa-moon"></i> <span>Dark</span>
+          </button>
+          <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL direction">
+            <i class="fa-solid fa-globe"></i> <span>RTL</span>
+          </button>
+        </li>
+      </ul>
+      <div class="navbar-controls">
+        <a href="signup.html" class="btn btn-primary" id="link-signup" style="padding: 8px 20px; font-size: 0.9rem;">Sign Up</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: PRICING HERO -->
+  <section class="header-hero" style="background-image: linear-gradient(rgba(28,28,30,0.8), rgba(28,28,30,0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa');">
+    <div class="container">
+      <h1 class="fade-in-up">Flat-Rate Pricing</h1>
+      <p class="fade-in-up">We quote before we start. You approve before we work. Simple.</p>
+      <div class="breadcrumb justify-content-center fade-in-up" style="justify-content: center;">
+        <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:0.75rem;"></i> <span>Pricing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: MONTHLY/YEARLY TOGGLE -->
+  <section class="section" id="pricing-plans" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="switch-container fade-in-up">
+        <span class="switch-label active" id="switch-one-time">One-Time Visit</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="pricing-checkbox">
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="switch-label" id="switch-membership">Membership Plan</span>
+        <span class="toggle-badge">Save 20%</span>
+      </div>
+
+      <!-- SECTION 3: PRICING CARDS -->
+      <div class="grid-3 stagger-grid">
+        <!-- Plan 1 -->
+        <div class="card pricing-card fade-in-up">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Basic</h3>
+            <div class="pricing-price"><span class="pricing-price-val">$79</span><span class="pricing-period">/visit</span></div>
+            <p style="color:var(--gray); font-size:0.85rem; margin-top:4px;">Great for quick inspections & diagnostics</p>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Single repair visit</li>
+            <li><i class="fa-solid fa-check"></i> Labor diagnostics included</li>
+            <li><i class="fa-solid fa-check"></i> 30-day labor warranty</li>
+            <li style="opacity: 0.5;"><i class="fa-solid fa-xmark"></i> Priority dispatch</li>
+            <li style="opacity: 0.5;"><i class="fa-solid fa-xmark"></i> Annual inspection</li>
+          </ul>
+          <a href="signup.html?plan=basic" class="btn btn-outline-primary btn-full">Book Now</a>
+        </div>
+ 
+        <!-- Plan 2 (Popular) -->
+        <div class="card pricing-card pricing-popular fade-in-up">
+          <span class="popular-badge">Most Popular</span>
+          <div class="pricing-header">
+            <h3 class="pricing-title">Pro</h3>
+            <div class="pricing-price"><span class="pricing-price-val">$149</span><span class="pricing-period">/visit</span></div>
+            <p style="color:var(--gray); font-size:0.85rem; margin-top:4px;">Complete maintenance & parts discount</p>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Unlimited tune-ups</li>
+            <li><i class="fa-solid fa-check"></i> Parts at wholesale cost</li>
+            <li><i class="fa-solid fa-check"></i> 90-day labor warranty</li>
+            <li style="opacity: 0.5;"><i class="fa-solid fa-xmark"></i> Priority dispatch</li>
+            <li><i class="fa-solid fa-check"></i> Annual 20-point safety check</li>
+          </ul>
+          <a href="signup.html?plan=pro" class="btn btn-primary btn-full">Start Pro Plan</a>
+        </div>
+ 
+        <!-- Plan 3 -->
+        <div class="card pricing-card fade-in-up">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Elite</h3>
+            <div class="pricing-price"><span class="pricing-price-val">$249</span><span class="pricing-period">/visit</span></div>
+            <p style="color:var(--gray); font-size:0.85rem; margin-top:4px;">Priority emergency & full parts coverage</p>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Priority same-day & installs</li>
+            <li><i class="fa-solid fa-check"></i> Parts included (up to $500)</li>
+            <li><i class="fa-solid fa-check"></i> 1-year full warranty</li>
+            <li><i class="fa-solid fa-check"></i> 24/7 Priority dispatch</li>
+            <li><i class="fa-solid fa-check"></i> Annual safety audit + tune-up</li>
+          </ul>
+          <a href="signup.html?plan=elite" class="btn btn-outline-primary btn-full">Go Elite</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: COMPARISON TABLE -->
+  <section class="section" id="comparison">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Plan Comparison</h2>
+        <p class="section-subtitle fade-in">Review the specific service scopes, warranties, and dispatch response speeds.</p>
+      </div>
+
+      <div class="table-responsive scale-in">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Basic</th>
+              <th>Pro</th>
+              <th>Elite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Response Time</td>
+              <td>Same-Day (Best Effort)</td>
+              <td>Within 4 Hours</td>
+              <td>Under 2 Hours (Priority)</td>
+            </tr>
+            <tr>
+              <td>Parts Warranty</td>
+              <td>Manufacturer standard</td>
+              <td>1 Year Extended</td>
+              <td>Lifetime warranty on selected parts</td>
+            </tr>
+            <tr>
+              <td>Labor Warranty</td>
+              <td>30 Days</td>
+              <td>90 Days</td>
+              <td>365 Days</td>
+            </tr>
+            <tr>
+              <td>Priority Dispatch</td>
+              <td><i class="fa-solid fa-circle-xmark"></i></td>
+              <td><i class="fa-solid fa-circle-xmark"></i></td>
+              <td><i class="fa-solid fa-circle-check"></i></td>
+            </tr>
+            <tr>
+              <td>Annual Inspection</td>
+              <td><i class="fa-solid fa-circle-xmark"></i></td>
+              <td><i class="fa-solid fa-circle-check"></i></td>
+              <td><i class="fa-solid fa-circle-check"></i></td>
+            </tr>
+            <tr>
+              <td>Emergency Calls</td>
+              <td>$49 Surcharge</td>
+              <td>$19 Surcharge</td>
+              <td>$0 (Waived)</td>
+            </tr>
+            <tr>
+              <td>Smart Opener Support</td>
+              <td><i class="fa-solid fa-circle-xmark"></i></td>
+              <td><i class="fa-solid fa-circle-check"></i></td>
+              <td><i class="fa-solid fa-circle-check"></i></td>
+            </tr>
+            <tr>
+              <td>Commercial Service</td>
+              <td><i class="fa-solid fa-circle-xmark"></i></td>
+              <td><i class="fa-solid fa-circle-xmark"></i></td>
+              <td><i class="fa-solid fa-circle-check"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: TRUST BADGES -->
+  <section class="section section-alt" id="pricing-trust">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Our Promise to You</h2>
+        <p class="section-subtitle fade-in">Every plan comes backed by our core commitments — no surprises, no fine print.</p>
+      </div>
+      <div class="trust-grid stagger-grid">
+        <div class="trust-card scale-in">
+          <div class="trust-icon-wrap">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <h4 class="trust-title">Flat-Rate Pricing</h4>
+          <p class="trust-desc">You get a firm quote upfront. The price we say is the price you pay — always.</p>
+        </div>
+        <div class="trust-card scale-in">
+          <div class="trust-icon-wrap">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <h4 class="trust-title">No Hidden Fees</h4>
+          <p class="trust-desc">No diagnostic surprises. No fuel surcharges. No after-the-fact add-ons, period.</p>
+        </div>
+        <div class="trust-card scale-in">
+          <div class="trust-icon-wrap">
+            <i class="fa-solid fa-calendar-xmark"></i>
+          </div>
+          <h4 class="trust-title">Cancel Anytime</h4>
+          <p class="trust-desc">Membership plans have zero lock-in. Cancel, pause, or upgrade directly from your dashboard.</p>
+        </div>
+        <div class="trust-card scale-in">
+          <div class="trust-icon-wrap">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <h4 class="trust-title">Licensed &amp; Insured</h4>
+          <p class="trust-desc">Every technician is fully licensed, background-checked, and covered by our liability policy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: PRICING FAQ ACCORDION -->
+  <section class="section" id="pricing-faqs">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Pricing FAQ</h2>
+        <p class="section-subtitle fade-in">Clarifications on our service call fee waivers, plan upgrades, and discounts.</p>
+      </div>
+
+      <div class="accordion fade-in">
+        <!-- Item 1 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Is the service call fee waived if I book a repair?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-content">
+            <p>Yes. When you authorize our technician to proceed with any recommended repair work, the standard service call diagnostic fee is waived entirely from your final bill.</p>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Can I upgrade or downgrade my membership?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-content">
+            <p>Absolutely. You can modify your membership plan, upgrade to Elite for emergency storm response, or cancel your renewal at any time directly through your customer dashboard with zero penalties.</p>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Are parts included in the membership?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-content">
+            <p>Under the Basic plan, parts are extra. Under the Pro plan, you receive direct wholesale discount access (parts at cost). Under the Elite plan, residential replacement components are fully included up to a value of $500 per service calendar year.</p>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Do you offer senior or military discounts?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-content">
+            <p>Yes. We proudly support local veterans, seniors, and active responders. We offer a 10% discount on all standard repair services and new residential installations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <i class="fa-solid fa-warehouse"></i> ProLift
+          </div>
+          <p>Serving Phoenix & surrounding areas since 1999. Family owned, locally operated, and built on trust and credibility.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home1.html" class="footer-link">HOME 2</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">New Installation</a></li>
+            <li><a href="services.html" class="footer-link">Spring Repair</a></li>
+            <li><a href="services.html" class="footer-link">Cable Repair</a></li>
+            <li><a href="services.html" class="footer-link">Opener Install</a></li>
+            <li><a href="services.html" class="footer-link">Tune-Up & Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Phone:</strong><br>
+                (602) 555-0198
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email:</strong><br>
+                info@proliftdoors.com
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Address:</strong><br>
+                Phoenix, AZ 85001
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Hours:</strong><br>
+                Mon–Sat: 7AM–8PM<br>
+                Sun: Emergency Only
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 ProLift. All rights reserved.</div>
+        <div class="footer-rating">
+          <i class="fa-solid fa-star"></i>
+          <span><strong>4.9/5</strong> Google Rating</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

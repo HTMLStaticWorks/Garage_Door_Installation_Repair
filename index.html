@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProLift - Professional Local Garage Door Experts</title>
+  <meta name="description" content="Your local garage door specialists. Fast repairs, professional installation, and 24/7 emergency dispatch in Phoenix. Free estimates and warranty on parts.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="main-navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" id="nav-logo">
+        <i class="fa-solid fa-warehouse"></i> ProLift
+      </a>
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="index.html" class="navbar-link" id="link-home">Home</a></li>
+        <li><a href="home1.html" class="navbar-link" id="link-home1">HOME 2</a></li>
+        <li><a href="about.html" class="navbar-link" id="link-about">About</a></li>
+        <li><a href="services.html" class="navbar-link" id="link-services">Services</a></li>
+        <li><a href="pricing.html" class="navbar-link" id="link-pricing">Pricing</a></li>
+        <li><a href="dashboard.html" class="navbar-link" id="link-dashboard">Dashboard</a></li>
+        <li><a href="contact.html" class="navbar-link" id="link-contact">Contact</a></li>
+        <li class="mobile-controls" style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 0;">
+          <button class="control-btn" id="theme-toggle" aria-label="Toggle dark theme">
+            <i class="fa-solid fa-moon"></i> <span>Dark</span>
+          </button>
+          <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL direction">
+            <i class="fa-solid fa-globe"></i> <span>RTL</span>
+          </button>
+        </li>
+      </ul>
+      <div class="navbar-controls">
+        <a href="signup.html" class="btn btn-primary" id="link-signup" style="padding: 8px 20px; font-size: 0.9rem;">Sign Up</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: HERO -->
+  <header class="hero-home">
+    <div class="hero-home-bg"></div>
+    <div class="container hero-home-content">
+      <div class="badge-pulse fade-in" id="hero-badge">
+        <i class="fa-solid fa-bolt"></i> Same Day Service
+      </div>
+      <h1 class="fade-in-up" id="hero-title">Your Garage Door Experts — Installed Right. Fixed Fast.</h1>
+      <p class="fade-in-up" id="hero-subtitle">Same-day service available. Residential & commercial. Licensed, bonded.</p>
+      <div class="hero-buttons fade-in-up" id="hero-ctas">
+        <a href="tel:6025550198" class="btn btn-primary" id="btn-call-quote">
+          <i class="fa-solid fa-phone"></i> Call Now — Free Quote
+        </a>
+        <a href="signup.html" class="btn btn-secondary" id="btn-book-tech">
+          <i class="fa-solid fa-screwdriver-wrench"></i> Book a Technician
+        </a>
+      </div>
+      <div class="text-center">
+        <a href="#stats" class="bounce-arrow" aria-label="Scroll down">
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: TRUST STATS BAR -->
+  <section class="stats-bar" id="stats">
+    <div class="container stats-container stagger-grid">
+      <div class="stat-item scale-in">
+        <div class="stat-number" data-target="15000" data-suffix="+">0</div>
+        <div class="stat-label">Doors Installed</div>
+      </div>
+      <div class="stat-item scale-in">
+        <div class="stat-number" data-target="25" data-suffix="+">0</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item scale-in">
+        <div class="stat-number" data-target="500" data-suffix="+">0</div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="stat-item scale-in">
+        <div class="stat-number" data-target="100" data-suffix="%">0</div>
+        <div class="stat-label">Same-Day Guarantee</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SERVICES HIGHLIGHT GRID -->
+  <section class="section" id="services-highlight">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Professional Solutions</h2>
+        <p class="section-subtitle fade-in">We provide top-tier garage door services with high-quality components and certified experts.</p>
+      </div>
+      
+      <div class="grid-3 stagger-grid">
+        <!-- Service Card 1 -->
+        <div class="card card-top-accent fade-in-up">
+          <div class="card-image-container">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&h=400&q=80" alt="Modern house with new garage door installation">
+          </div>
+          <h3 class="card-title">New Door Installation</h3>
+          <p class="card-description">Full replacement, modern designs, custom sizing, and energy-efficient insulated materials.</p>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="card card-top-accent fade-in-up">
+          <div class="card-image-container">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&h=400&q=80" alt="Technician repairing garage door components">
+          </div>
+          <h3 class="card-title">Spring & Cable Repair</h3>
+          <p class="card-description">Same-day emergency fix for broken torsion springs, snapped cables, and off-track doors.</p>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="card card-top-accent fade-in-up">
+          <div class="card-image-container">
+            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&h=400&q=80" alt="Smartphone with smart home opener app">
+          </div>
+          <h3 class="card-title">Smart Opener Upgrade</h3>
+          <p class="card-description">WiFi-enabled LiftMaster or Chamberlain opener installations with secure smartphone app control.</p>
+        </div>
+      </div>
+      
+      <div class="text-center fade-in-up" style="margin-top: calc(var(--space) * 6);">
+        <a href="signup.html" class="btn btn-primary">Enquire Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: IMAGE + TEXT SPLIT -->
+  <section class="section section-alt" id="about-split">
+    <div class="container grid-2">
+      <div class="split-image-container fade-in-left">
+        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&h=600&q=80" alt="Technician repairing garage door spring mechanism">
+      </div>
+      <div class="split-content fade-in-right">
+        <h2 class="section-title" style="margin-left: 0; text-align: start;">We Fix It Right The First Time</h2>
+        <p>ProLift brings elite repairs directly to your driveway. We specialize in diagnosing issues instantly, quoting transparent flat rates, and executing permanent repairs using industrial-grade components.</p>
+        <ul class="checklist">
+          <li class="checklist-item"><i class="fa-solid fa-circle-check"></i> Licensed, bonded, and fully insured technicians</li>
+          <li class="checklist-item"><i class="fa-solid fa-circle-check"></i> All major brands and mechanisms serviced</li>
+          <li class="checklist-item"><i class="fa-solid fa-circle-check"></i> Premium hardware parts backed by warranties</li>
+          <li class="checklist-item"><i class="fa-solid fa-circle-check"></i> Clear, upfront, flat-rate pricing</li>
+        </ul>
+        <div>
+          <a href="services.html" class="btn btn-outline-primary" style="margin-top: var(--space);">See All Services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: INTERACTIVE DIAGNOSTIC CENTER -->
+  <section class="section section-alt" id="diagnostics">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Interactive Diagnostic Center</h2>
+        <p class="section-subtitle fade-in">Click on any common garage door issue below to identify potential risks and get recommended solutions instantly.</p>
+      </div>
+
+      <div class="diagnostics-layout scale-in">
+        <!-- Tabs List -->
+        <div class="diag-tabs">
+          <button class="diag-tab-btn active" data-target="spring" aria-label="Diagnose Broken Springs">
+            <span class="tab-icon"><i class="fa-solid fa-gears"></i></span>
+            <span class="tab-label">
+              <span class="tab-title">Broken Springs</span>
+              <span class="tab-desc">Door feels extremely heavy</span>
+            </span>
+          </button>
+          
+          <button class="diag-tab-btn" data-target="track" aria-label="Diagnose Off-Track Roller">
+            <span class="tab-icon"><i class="fa-solid fa-circle-nodes"></i></span>
+            <span class="tab-label">
+              <span class="tab-title">Off-Track Roller</span>
+              <span class="tab-desc">Door is crooked or shaking</span>
+            </span>
+          </button>
+
+          <button class="diag-tab-btn" data-target="opener" aria-label="Diagnose Opener Failures">
+            <span class="tab-icon"><i class="fa-solid fa-wifi"></i></span>
+            <span class="tab-label">
+              <span class="tab-title">Opener Failures</span>
+              <span class="tab-desc">Motor runs but no movement</span>
+            </span>
+          </button>
+
+          <button class="diag-tab-btn" data-target="noise" aria-label="Diagnose Noisy Operation">
+            <span class="tab-icon"><i class="fa-solid fa-oil-can"></i></span>
+            <span class="tab-label">
+              <span class="tab-title">Noisy Operation</span>
+              <span class="tab-desc">Loud squeaks or grinding sounds</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Detail Cards -->
+        <div class="diag-content-panel">
+          <!-- Spring Card -->
+          <div class="diag-detail-card active" id="diag-card-spring">
+            <div class="diag-card-header">
+              <h3 class="diag-card-title">Broken Torsion Springs</h3>
+              <span class="risk-badge risk-danger">Danger - High Tension</span>
+            </div>
+            <div class="diag-card-body">
+              <p>Your garage door torsion springs balance the weight of the door. When a spring snaps (often accompanied by a loud bang), the door loses all support, making it dangerous or impossible to open.</p>
+              <h4 class="diag-steps-title">Recommended Safety Steps:</h4>
+              <ul class="diag-steps">
+                <li class="diag-step-item"><i class="fa-solid fa-triangle-exclamation"></i> <span><strong>Do Not Attempt to Lift:</strong> Trying to open a door manually or with an opener when a spring is broken can burn out the motor or cause serious injury.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-info"></i> <span><strong>Clear the Area:</strong> Keep children and pets away from the door under tension.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-check"></i> <span><strong>Replace in Pairs:</strong> Since both springs experience identical wear, we recommend replacing both simultaneously to prevent a second failure soon after.</span></li>
+              </ul>
+            </div>
+            <div class="diag-card-footer">
+              <a href="signup.html" class="btn btn-primary" id="btn-diag-spring"><i class="fa-solid fa-screwdriver-wrench"></i> Book Spring Replacement</a>
+            </div>
+          </div>
+
+          <!-- Track Card -->
+          <div class="diag-detail-card" id="diag-card-track">
+            <div class="diag-card-header">
+              <h3 class="diag-card-title">Off-Track & Crooked Rollers</h3>
+              <span class="risk-badge risk-warning">Warning - High Risk</span>
+            </div>
+            <div class="diag-card-body">
+              <p>If the door becomes crooked or jumps its tracks, it indicates that a roller has popped out or a lift cable has snapped. Attempting to force the door closed can bend the track or cause the door to fall.</p>
+              <h4 class="diag-steps-title">Recommended Safety Steps:</h4>
+              <ul class="diag-steps">
+                <li class="diag-step-item"><i class="fa-solid fa-triangle-exclamation"></i> <span><strong>Stop Operation:</strong> Do not activate the automatic opener. This will prevent twisting the tracks further.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-info"></i> <span><strong>Visually Inspect:</strong> Check if any rollers are fully out of the track channels.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-check"></i> <span><strong>Call for Realignment:</strong> Professional tools are required to reset the heavy cables under tension and re-align the tracking frames safely.</span></li>
+              </ul>
+            </div>
+            <div class="diag-card-footer">
+              <a href="signup.html" class="btn btn-primary" id="btn-diag-track"><i class="fa-solid fa-screwdriver-wrench"></i> Book Track Realignment</a>
+            </div>
+          </div>
+
+          <!-- Opener Card -->
+          <div class="diag-detail-card" id="diag-card-opener">
+            <div class="diag-card-header">
+              <h3 class="diag-card-title">Opener Motor Malfunction</h3>
+              <span class="risk-badge risk-warning">Warning - Moderate Risk</span>
+            </div>
+            <div class="diag-card-body">
+              <p>When the motor hums but the door fails to move, the internal nylon gears may be stripped, or the travel limits need recalibration. If the opener is completely unresponsive, check the power source and remote batteries first.</p>
+              <h4 class="diag-steps-title">Recommended Safety Steps:</h4>
+              <ul class="diag-steps">
+                <li class="diag-step-item"><i class="fa-solid fa-battery-half"></i> <span><strong>Check Remote & Sensors:</strong> Ensure the safety eye-sensors at the bottom of the tracks are aligned and the lenses are clean.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-hand"></i> <span><strong>Use Emergency Release:</strong> Pull the red emergency cord to disconnect the carriage. Test if the door lifts easily by hand to check for mechanical blockages.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-check"></i> <span><strong>Upgrade to Smart Opener:</strong> If your opener is over 15 years old, consider upgrading to a modern belt-drive unit with WiFi and backup battery capabilities.</span></li>
+              </ul>
+            </div>
+            <div class="diag-card-footer">
+              <a href="signup.html" class="btn btn-primary" id="btn-diag-opener"><i class="fa-solid fa-screwdriver-wrench"></i> Book Motor Diagnosis</a>
+            </div>
+          </div>
+
+          <!-- Noise Card -->
+          <div class="diag-detail-card" id="diag-card-noise">
+            <div class="diag-card-header">
+              <h3 class="diag-card-title">Noisy Squeaks & Grinding</h3>
+              <span class="risk-badge risk-low">Low Risk - Maintenance Alert</span>
+            </div>
+            <div class="diag-card-body">
+              <p>Loud squeaks, squeals, or grinding sounds occur when moving steel components lack proper lubrication or when rollers are worn down. Ignoring these sounds puts excessive strain on the garage opener motor.</p>
+              <h4 class="diag-steps-title">Recommended Safety Steps:</h4>
+              <ul class="diag-steps">
+                <li class="diag-step-item"><i class="fa-solid fa-oil-can"></i> <span><strong>Do Not Use WD-40:</strong> Avoid standard degreasers. Use specialized silicone or lithium-based garage door lubricants on hinges, rollers, and springs.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-info"></i> <span><strong>Check Roller Wear:</strong> If you have steel rollers, upgrading to nylon rollers will reduce operating noise by up to 75%.</span></li>
+                <li class="diag-step-item"><i class="fa-solid fa-circle-check"></i> <span><strong>Schedule a Tune-Up:</strong> A full 20-point inspection will tighten loose hinges, balance the spring tension, and ensure quiet, smooth travel.</span></li>
+              </ul>
+            </div>
+            <div class="diag-card-footer">
+              <a href="signup.html" class="btn btn-primary" id="btn-diag-noise"><i class="fa-solid fa-screwdriver-wrench"></i> Book a Tune-Up Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: TESTIMONIALS SLIDER -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">What Our Clients Say</h2>
+        <p class="section-subtitle fade-in">We are rated 4.9 out of 5 stars by thousands of satisfied local homeowners.</p>
+      </div>
+
+      <div class="slider-wrapper scale-in">
+        <div class="slider-track" id="slider-track">
+          <!-- Slide 1 -->
+          <div class="slide">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80" alt="John D.">
+              </div>
+              <h3 class="testimonial-name">John D.</h3>
+              <div class="testimonial-meta">Phoenix, AZ</div>
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">"My spring snapped in the morning, pinning my car in the garage. ProLift sent Mike out within 90 minutes. He was fast, professional, and the price was exactly what he quoted. Outstanding service!"</p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80" alt="Sarah M.">
+              </div>
+              <h3 class="testimonial-name">Sarah M.</h3>
+              <div class="testimonial-meta">Scottsdale, AZ</div>
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">"Excellent experience upgrading to a new insulated carriage door. The curb appeal of my home has completely changed. The team cleaned up perfectly and programmed all our smart openers."</p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80" alt="Robert K.">
+              </div>
+              <h3 class="testimonial-name">Robert K.</h3>
+              <div class="testimonial-meta">Tempe, AZ</div>
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">"Highly recommend their annual tune-up. They adjusted the tracks, aligned the sensors, and lubricated the rollers. The door runs quieter than it has in ten years. Great value!"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="slider-btn slider-btn-prev" id="slider-prev" aria-label="Previous slide">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="slider-btn slider-btn-next" id="slider-next" aria-label="Next slide">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Dots -->
+        <div class="slider-dots" id="slider-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: EMERGENCY CTA BANNER -->
+  <section class="emergency-banner" id="emergency">
+    <div class="container scale-in">
+      <h2><span class="spinning-wrench"><i class="fa-solid fa-wrench"></i></span> Garage Door Won't Open? We're On Our Way.</h2>
+      <p>Providing 24/7 emergency services, broken spring repair, and dispatching technicians round the clock.</p>
+      <a href="tel:6025550198" class="btn btn-secondary btn-primary" style="background-color: var(--charcoal); color: var(--white); border-color: var(--charcoal-2);">
+        <i class="fa-solid fa-phone"></i> Call 24/7 Emergency Line
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <i class="fa-solid fa-warehouse"></i> ProLift
+          </div>
+          <p>Serving Phoenix & surrounding areas since 1999. Family owned, locally operated, and built on trust and credibility.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home1.html" class="footer-link">HOME 2</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">New Installation</a></li>
+            <li><a href="services.html" class="footer-link">Spring Repair</a></li>
+            <li><a href="services.html" class="footer-link">Cable Repair</a></li>
+            <li><a href="services.html" class="footer-link">Opener Install</a></li>
+            <li><a href="services.html" class="footer-link">Tune-Up & Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Phone:</strong><br>
+                (602) 555-0198
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email:</strong><br>
+                info@proliftdoors.com
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Address:</strong><br>
+                Phoenix, AZ 85001
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Hours:</strong><br>
+                Mon–Sat: 7AM–8PM<br>
+                Sun: Emergency Only
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 ProLift. All rights reserved.</div>
+        <div class="footer-rating">
+          <i class="fa-solid fa-star"></i>
+          <span><strong>4.9/5</strong> Google Rating</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

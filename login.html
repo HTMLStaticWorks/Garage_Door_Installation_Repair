@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In - ProLift</title>
+  <meta name="description" content="Log in to your ProLift account to access active dispatches, supervisor panels, and technician telemetry data.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css?v=1.2">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- SPLIT HERO + LOGIN FORM -->
+  <section class="split-hero">
+    <div class="split-hero-left" style="background-image: linear-gradient(rgba(28,28,30,0.85), rgba(28,28,30,0.85)), url('https://images.unsplash.com/photo-1558441719-ff34b0524a24');">
+      <div class="badge-pulse fade-in" style="background-color: var(--primary); width: fit-content; margin-bottom: var(--space);">
+        <i class="fa-solid fa-key"></i> Secure Access
+      </div>
+      <h1 class="fade-in-up">Manage Your Operations in Real-Time</h1>
+      <p class="fade-in-up" style="font-size: 1.25rem; color:rgba(255,255,255,0.85); max-width:500px;">Access your active service queues, direct technician tracking map, and regional supervisor metrics instantly.</p>
+    </div>
+    
+    <div class="split-hero-right">
+      <div class="signup-card scale-in">
+        <!-- Brand logo & theme controls -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: calc(var(--space) * 3); border-bottom: 1px solid var(--border); padding-bottom: calc(var(--space) * 2);">
+          <a href="index.html" style="display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--text); text-decoration: none;">
+            <i class="fa-solid fa-warehouse" style="color: var(--primary);"></i> ProLift
+          </a>
+          <div style="display: flex; gap: 10px;">
+            <button class="control-btn" id="theme-toggle" aria-label="Toggle dark theme" style="background: transparent; border: 1px solid var(--border); border-radius: var(--radius-input); padding: 4px 10px; cursor: pointer; color: var(--text); font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-moon"></i> <span>Dark</span>
+            </button>
+            <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL direction" style="background: transparent; border: 1px solid var(--border); border-radius: var(--radius-input); padding: 4px 10px; cursor: pointer; color: var(--text); font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-globe"></i> <span>RTL</span>
+            </button>
+          </div>
+        </div>
+        
+        <h2 style="font-family: var(--font-display); font-size:1.8rem; margin-bottom:calc(var(--space) * 3);">Log In to Your Account</h2>
+        
+        <form id="login-form" novalidate>
+          <!-- Email Address -->
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email Address</label>
+            <input type="email" id="login-email" class="form-input" placeholder="admin@proliftdoors.com" required>
+            <span class="form-error">Please enter a valid email address.</span>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label class="form-label" for="login-password">Password</label>
+            <div style="position: relative;">
+              <input type="password" id="login-password" class="form-input" placeholder="••••••••" required style="padding-right: 40px;">
+              <button type="button" class="password-toggle" onclick="const input = document.getElementById('login-password'); const icon = this.querySelector('i'); if (input.type === 'password') { input.type = 'text'; icon.classList.remove('fa-eye'); icon.classList.add('fa-eye-slash'); } else { input.type = 'password'; icon.classList.remove('fa-eye-slash'); icon.classList.add('fa-eye'); }" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--gray); cursor: pointer; padding: 0;">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+            <span class="form-error">Password must be at least 8 characters long.</span>
+          </div>
+
+          <!-- Remember Me & Forgot Password -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: calc(var(--space) * 3); font-size: 0.85rem;">
+            <div class="checkbox-group" style="margin-bottom: 0;">
+              <input type="checkbox" id="remember-me" checked>
+              <label for="remember-me">Remember me</label>
+            </div>
+            <a href="#" onclick="alert('Password reset link sent to your email.');" style="color: var(--primary); text-decoration: underline;">Forgot Password?</a>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary btn-full" id="btn-login-submit">
+            Log In
+          </button>
+        </form>
+
+        <!-- Social login strip -->
+        <div class="social-signup-div">
+          <span class="social-signup-text">or continue with</span>
+        </div>
+
+        <div class="social-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: calc(var(--space) * 3);">
+          <button class="btn btn-outline" onclick="alert('Google Auth Triggered');" style="font-size:0.85rem; padding: 10px; border-radius: var(--radius-input);">
+            <i class="fa-brands fa-google" style="color:#e74c3c;"></i> Google
+          </button>
+          <button class="btn btn-outline" onclick="alert('Facebook Auth Triggered');" style="font-size:0.85rem; padding: 10px; border-radius: var(--radius-input);">
+            <i class="fa-brands fa-facebook" style="color:#3498db;"></i> Facebook
+          </button>
+          <button class="btn btn-outline" onclick="alert('Apple Auth Triggered');" style="font-size:0.85rem; padding: 10px; border-radius: var(--radius-input);">
+            <i class="fa-brands fa-apple" style="color:var(--text);"></i> Apple
+          </button>
+        </div>
+
+        <p style="text-align: center; font-size: 0.85rem; color: var(--gray); margin-top: calc(var(--space) * 2);">
+          Don't have an account? <a href="signup.html" style="color: var(--primary); font-weight: bold; text-decoration: underline;">Sign up here</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

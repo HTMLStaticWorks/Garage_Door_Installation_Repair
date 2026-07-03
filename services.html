@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - ProLift</title>
+  <meta name="description" content="Explore our comprehensive garage door repair and installation services. From torsion spring replacements to smart opener upgrades and commercial gates.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css?v=1.2">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="main-navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" id="nav-logo">
+        <i class="fa-solid fa-warehouse"></i> ProLift
+      </a>
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="index.html" class="navbar-link" id="link-home">Home</a></li>
+        <li><a href="home1.html" class="navbar-link" id="link-home1">HOME 2</a></li>
+        <li><a href="about.html" class="navbar-link" id="link-about">About</a></li>
+        <li><a href="services.html" class="navbar-link" id="link-services">Services</a></li>
+        <li><a href="pricing.html" class="navbar-link" id="link-pricing">Pricing</a></li>
+        <li><a href="dashboard.html" class="navbar-link" id="link-dashboard">Dashboard</a></li>
+        <li><a href="contact.html" class="navbar-link" id="link-contact">Contact</a></li>
+        <li class="mobile-controls" style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 0;">
+          <button class="control-btn" id="theme-toggle" aria-label="Toggle dark theme">
+            <i class="fa-solid fa-moon"></i> <span>Dark</span>
+          </button>
+          <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL direction">
+            <i class="fa-solid fa-globe"></i> <span>RTL</span>
+          </button>
+        </li>
+      </ul>
+      <div class="navbar-controls">
+        <a href="signup.html" class="btn btn-primary" id="link-signup" style="padding: 8px 20px; font-size: 0.9rem;">Sign Up</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: SERVICES HERO -->
+  <section class="header-hero" style="background-image: linear-gradient(rgba(28,28,30,0.8), rgba(28,28,30,0.8)), url('https://images.unsplash.com/photo-1610444356073-41dc3b51ee24?auto=format&fit=crop&w=1920&q=80');">
+    <div class="container">
+      <h1 class="fade-in-up">Garage Door Services</h1>
+      <p class="fade-in-up">Residential & commercial. New installs, repairs, openers, springs, and more.</p>
+      <div class="breadcrumb justify-content-center fade-in-up" style="justify-content: center;">
+        <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:0.75rem;"></i> <span>Services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SERVICES GRID (6 cards) -->
+  <section class="section" id="services-grid">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">What We Do</h2>
+        <p class="section-subtitle fade-in">Top-quality components and expert care for every system segment.</p>
+      </div>
+
+      <div class="grid-3 stagger-grid">
+        <!-- Card 1 -->
+        <div class="card card-top-accent fade-in-up" style="display:flex; flex-direction:column;">
+          <div class="card-image-container">
+            <img src="https://i.pinimg.com/1200x/d2/37/6e/d2376e8e83a85d7cc5e88ac99cc74b88.jpg" alt="New Door Installation">
+          </div>
+          <h3 class="card-title">New Door Installation</h3>
+          <p style="font-size:1.15rem; font-weight:bold; color:var(--primary); margin-bottom:var(--space);">From $499</p>
+          <ul class="checklist" style="flex-grow:1; font-size:0.9rem; margin-top:0;">
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Custom modern designs</li>
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Insulation upgrades</li>
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Full system warranties</li>
+          </ul>
+          <a href="signup.html" class="btn btn-outline-primary btn-full">Book This Service</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="card card-top-accent fade-in-up" style="display:flex; flex-direction:column;">
+          <div class="card-image-container">
+            <img src="images/spring_replacement.png" alt="Spring Replacement">
+          </div>
+          <h3 class="card-title">Spring Replacement</h3>
+          <p style="font-size:1.15rem; font-weight:bold; color:var(--primary); margin-bottom:var(--space);">From $149</p>
+          <ul class="checklist" style="flex-grow:1; font-size:0.9rem; margin-top:0;">
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> High-cycle steel springs</li>
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Matching pair replacement</li>
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Safety balance calibration</li>
+          </ul>
+          <a href="signup.html" class="btn btn-outline-primary btn-full">Book This Service</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="card card-top-accent fade-in-up" style="display:flex; flex-direction:column;">
+          <div class="card-image-container">
+            <img src="images/cable_repair.png" alt="Cable Repair">
+          </div>
+          <h3 class="card-title">Cable Repair</h3>
+          <p style="font-size:1.15rem; font-weight:bold; color:var(--primary); margin-bottom:var(--space);">From $99</p>
+          <ul class="checklist" style="flex-grow:1; font-size:0.9rem; margin-top:0;">
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Heavy-duty steel cables</li>
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Roller track realignment</li>
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Preventative oil coating</li>
+          </ul>
+          <a href="signup.html" class="btn btn-outline-primary btn-full">Book This Service</a>
+        </div>
+        <!-- Card 4 -->
+        <div class="card card-top-accent fade-in-up" style="display:flex; flex-direction:column;">
+          <div class="card-image-container">
+            <img src="images/opener_installation.png" alt="Opener Installation">
+          </div>
+          <h3 class="card-title">Opener Installation</h3>
+          <p style="font-size:1.15rem; font-weight:bold; color:var(--primary); margin-bottom:var(--space);">From $199</p>
+          <ul class="checklist" style="flex-grow:1; font-size:0.9rem; margin-top:0;">
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Smart WiFi controllers</li>
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Ultra-quiet belt drives</li>
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Integrated battery backups</li>
+          </ul>
+          <a href="signup.html" class="btn btn-outline-primary btn-full">Book This Service</a>
+        </div>
+        <!-- Card 5 -->
+        <div class="card card-top-accent fade-in-up" style="display:flex; flex-direction:column;">
+          <div class="card-image-container">
+            <img src="images/maintenance_tune_up.png" alt="Maintenance Tune-Up">
+          </div>
+          <h3 class="card-title">Maintenance Tune-Up</h3>
+          <p style="font-size:1.15rem; font-weight:bold; color:var(--primary); margin-bottom:var(--space);">From $79</p>
+          <ul class="checklist" style="flex-grow:1; font-size:0.9rem; margin-top:0;">
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> 20-point safety audit</li>
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Roller tracks lubrication</li>
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Sensor alignments check</li>
+          </ul>
+          <a href="signup.html" class="btn btn-outline-primary btn-full">Book This Service</a>
+        </div>
+        <!-- Card 6 -->
+        <div class="card card-top-accent fade-in-up" style="display:flex; flex-direction:column;">
+          <div class="card-image-container">
+            <img src="images/commercial_service.png" alt="Commercial Service">
+          </div>
+          <h3 class="card-title">Commercial Service</h3>
+          <p style="font-size:1.15rem; font-weight:bold; color:var(--primary); margin-bottom:var(--space);">Custom Quote</p>
+          <ul class="checklist" style="flex-grow:1; font-size:0.9rem; margin-top:0;">
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Industrial grade panels</li>
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> High-frequency motors</li>
+            <li class="checklist-item" style="margin-bottom:8px;"><i class="fa-solid fa-check"></i> Full OSHA safety checks</li>
+          </ul>
+          <a href="signup.html" class="btn btn-outline-primary btn-full">Book This Service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: IMAGE + EQUIPMENT LIST -->
+  <section class="section section-alt" id="equipment-list">
+    <div class="container grid-2">
+      <div class="split-image-container fade-in-left">
+        <img src="images/torsion_spring.png" alt="Close-up of industrial steel garage door torsion spring and hardware">
+      </div>
+      <div class="split-content fade-in-right">
+        <h2 class="section-title" style="margin-left:0; text-align:start;">The Right Tools for the Job</h2>
+        <p>A garage door is the largest moving mechanism in your home, operating under high tension. We don't take shortcuts. ProLift stocks premium parts that exceed residential builder grades to ensure long-term safety.</p>
+        
+        <ul class="checklist grid-2" style="margin-top: calc(var(--space) * 2); gap: 0 var(--space);">
+          <li class="checklist-item"><i class="fa-solid fa-gears"></i> Torsion spring systems</li>
+          <li class="checklist-item"><i class="fa-solid fa-tower-cell"></i> LiftMaster/Genie openers</li>
+          <li class="checklist-item"><i class="fa-solid fa-circle-nodes"></i> Galvanized steel cables</li>
+          <li class="checklist-item"><i class="fa-solid fa-wind"></i> Weather-seal kits</li>
+          <li class="checklist-item"><i class="fa-solid fa-layer-group"></i> Insulated panels</li>
+          <li class="checklist-item"><i class="fa-solid fa-wifi"></i> WiFi garage controllers</li>
+          <li class="checklist-item"><i class="fa-solid fa-eye"></i> Safety sensor adjusters</li>
+          <li class="checklist-item"><i class="fa-solid fa-oil-can"></i> Heavy-duty lubricants</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: 4-STEP PROCESS -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Our Simple Process</h2>
+        <p class="section-subtitle fade-in">Four clear milestones to restore structural safety to your overhead door.</p>
+      </div>
+
+      <div class="process-stepper stagger-grid">
+        <!-- Step 1 -->
+        <div class="process-step fade-in-up">
+          <div class="step-num">1</div>
+          <h4 class="step-title">Book or Call</h4>
+          <p class="step-desc">Request service online or dial our emergency desk.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="process-step fade-in-up">
+          <div class="step-num">2</div>
+          <h4 class="step-title">Schedule Slot</h4>
+          <p class="step-desc">Confirm a convenient window with direct SMS alerts.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="process-step fade-in-up">
+          <div class="step-num">3</div>
+          <h4 class="step-title">Tech Arrives</h4>
+          <p class="step-desc">We diagnose issues and quote pre-approved flat rates.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="process-step fade-in-up">
+          <div class="step-num">4</div>
+          <h4 class="step-title">Done & Backed</h4>
+          <p class="step-desc">Parts installed with full labor warranties guaranteed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: FAQ ACCORDION -->
+  <section class="section section-alt" id="faqs">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Common Questions</h2>
+        <p class="section-subtitle fade-in">Everything you need to know about scheduling, pricing, and warranties.</p>
+      </div>
+
+      <div class="accordion fade-in">
+        <!-- FAQ 1 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            How quickly can a technician arrive?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-content">
+            <p>We arrive within 2 hours on average. With our same-day emergency dispatch trucks fully stocked, we aim to resolve residential repair tickets on the very first visit.</p>
+          </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Do you offer warranties on parts and labor?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-content">
+            <p>Yes. All components (springs, cables, rollers, openers) carry manufacture-backed product warranties, and all ProLift labor services are covered by our own workmanship warranties (up to 1 year on Elite plans).</p>
+          </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            What garage door brands do you work with?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-content">
+            <p>We work with and service all major manufacturers, including LiftMaster, Chamberlain, Genie, Sears, Clopay, Amarr, Wayne Dalton, and many others. If parts exist, our team can repair it.</p>
+          </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Can I get a same-day installation?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-content">
+            <p>While repair runs are resolved same-day, full-door panel replacements depend on custom sizing, material, and insulation availability. We do maintain a massive warehouse of standard options to speed up install times.</p>
+          </div>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Do you service commercial properties?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-content">
+            <p>Yes. ProLift has a dedicated commercial team fully certified to repair, inspect, and install high-frequency industrial openers, warehouse rolling panels, and safety fire doors.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: SERVICE COVERAGE AREA -->
+  <section class="section" id="coverage">
+    <div class="container">
+      <div class="card scale-in text-center" style="background-color: var(--charcoal); color: var(--white); border-color: var(--charcoal-2); padding: calc(var(--space) * 6);">
+        <h2 class="text-primary" style="font-family: var(--font-display); font-size: 2.2rem; margin-bottom: calc(var(--space) * 2.5);">Serving Phoenix & Surrounding Cities</h2>
+        <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">Our technicians operate local mobile repair vans positioned across the valley to promise rapid dispatch times.</p>
+        
+        <div class="pills-container">
+          <span class="pill-tag" style="background-color:var(--charcoal-2); color:var(--white); border-color:var(--steel);">Phoenix</span>
+          <span class="pill-tag" style="background-color:var(--charcoal-2); color:var(--white); border-color:var(--steel);">Scottsdale</span>
+          <span class="pill-tag" style="background-color:var(--charcoal-2); color:var(--white); border-color:var(--steel);">Tempe</span>
+          <span class="pill-tag" style="background-color:var(--charcoal-2); color:var(--white); border-color:var(--steel);">Mesa</span>
+          <span class="pill-tag" style="background-color:var(--charcoal-2); color:var(--white); border-color:var(--steel);">Chandler</span>
+          <span class="pill-tag" style="background-color:var(--charcoal-2); color:var(--white); border-color:var(--steel);">Gilbert</span>
+          <span class="pill-tag" style="background-color:var(--charcoal-2); color:var(--white); border-color:var(--steel);">Glendale</span>
+          <span class="pill-tag" style="background-color:var(--charcoal-2); color:var(--white); border-color:var(--steel);">Peoria</span>
+          <span class="pill-tag" style="background-color:var(--charcoal-2); color:var(--white); border-color:var(--steel);">Surprise</span>
+          <span class="pill-tag" style="background-color:var(--charcoal-2); color:var(--white); border-color:var(--steel);">Avondale</span>
+        </div>
+        
+        <p style="font-size: 0.85rem; color: var(--gray); margin-bottom: calc(var(--space) * 3);">Expanding coverage coming soon to Tucson & Flagstaff.</p>
+        <a href="signup.html" class="btn btn-primary">Check Zip Code Coverage <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <i class="fa-solid fa-warehouse"></i> ProLift
+          </div>
+          <p>Serving Phoenix & surrounding areas since 1999. Family owned, locally operated, and built on trust and credibility.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home1.html" class="footer-link">HOME 2</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">New Installation</a></li>
+            <li><a href="services.html" class="footer-link">Spring Repair</a></li>
+            <li><a href="services.html" class="footer-link">Cable Repair</a></li>
+            <li><a href="services.html" class="footer-link">Opener Install</a></li>
+            <li><a href="services.html" class="footer-link">Tune-Up & Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Phone:</strong><br>
+                (602) 555-0198
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email:</strong><br>
+                info@proliftdoors.com
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Address:</strong><br>
+                Phoenix, AZ 85001
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Hours:</strong><br>
+                Mon–Sat: 7AM–8PM<br>
+                Sun: Emergency Only
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 ProLift. All rights reserved.</div>
+        <div class="footer-rating">
+          <i class="fa-solid fa-star"></i>
+          <span><strong>4.9/5</strong> Google Rating</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

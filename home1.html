@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProLift - Alternate Home Layout</title>
+  <meta name="description" content="Choose ProLift for ultra-fast spring repair, smart openers, and custom panel installation. Explore our live job tracker.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="main-navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" id="nav-logo">
+        <i class="fa-solid fa-warehouse"></i> ProLift
+      </a>
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="index.html" class="navbar-link" id="link-home">Home</a></li>
+        <li><a href="home1.html" class="navbar-link" id="link-home1">HOME 2</a></li>
+        <li><a href="about.html" class="navbar-link" id="link-about">About</a></li>
+        <li><a href="services.html" class="navbar-link" id="link-services">Services</a></li>
+        <li><a href="pricing.html" class="navbar-link" id="link-pricing">Pricing</a></li>
+        <li><a href="dashboard.html" class="navbar-link" id="link-dashboard">Dashboard</a></li>
+        <li><a href="contact.html" class="navbar-link" id="link-contact">Contact</a></li>
+        <li class="mobile-controls" style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 0;">
+          <button class="control-btn" id="theme-toggle" aria-label="Toggle dark theme">
+            <i class="fa-solid fa-moon"></i> <span>Dark</span>
+          </button>
+          <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL direction">
+            <i class="fa-solid fa-globe"></i> <span>RTL</span>
+          </button>
+        </li>
+      </ul>
+      <div class="navbar-controls">
+        <a href="signup.html" class="btn btn-primary" id="link-signup" style="padding: 8px 20px; font-size: 0.9rem;">Sign Up</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: DARK HERO WITH TYPEWRITER -->
+  <header class="hero-dark">
+    <div class="hero-dark-bg"></div>
+    <div class="container hero-dark-content">
+      <div class="badge-pulse fade-in" id="hero-badge" style="background-color: var(--charcoal); border-color: var(--primary);">
+        <i class="fa-solid fa-star text-primary"></i> Premium Local Service
+      </div>
+      <h1 class="fade-in-up">ProLift — <br><span class="typewriter-text text-primary" id="typewriter"></span></h1>
+      <p class="fade-in-up" style="font-size: 1.25rem; margin-bottom: calc(var(--space) * 4); color: rgba(255,255,255,0.8);">ProLift — Where elite quality meets unmatched speed. Licensed residential specialists on call.</p>
+      <div class="fade-in-up">
+        <a href="signup.html" class="btn btn-primary" id="btn-estimate">
+          <i class="fa-solid fa-calculator"></i> Get a Free Estimate Today
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: SCROLLING TICKER STRIP -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <div class="ticker-item"><span>✦</span> Same-Day Repairs</div>
+      <div class="ticker-item"><span>✦</span> Free Estimates</div>
+      <div class="ticker-item"><span>✦</span> Fully Licensed & Insured</div>
+      <div class="ticker-item"><span>✦</span> All Major Brands Serviced</div>
+      <div class="ticker-item"><span>✦</span> 25 Years Experience</div>
+      <div class="ticker-item"><span>✦</span> 5-Star Rated</div>
+      <!-- Repeat to loop smoothly -->
+      <div class="ticker-item"><span>✦</span> Same-Day Repairs</div>
+      <div class="ticker-item"><span>✦</span> Free Estimates</div>
+      <div class="ticker-item"><span>✦</span> Fully Licensed & Insured</div>
+      <div class="ticker-item"><span>✦</span> All Major Brands Serviced</div>
+      <div class="ticker-item"><span>✦</span> 25 Years Experience</div>
+      <div class="ticker-item"><span>✦</span> 5-Star Rated</div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: WHY CHOOSE PROLIFT -->
+  <section class="section" id="why-choose">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Why Choose ProLift?</h2>
+        <p class="section-subtitle fade-in">We are engineered for reliability, transparency, and top-tier workmanship.</p>
+      </div>
+
+      <div class="grid-4 stagger-grid">
+        <!-- Card 1 -->
+        <div class="card card-top-accent fade-in-up">
+          <div class="card-image-container">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&h=400&q=80" alt="ProLift repair van on the way">
+          </div>
+          <h3 class="card-title">Fastest Response</h3>
+          <p class="card-description"><strong>Avg 90-Min Arrival</strong><br>Our mobile repair trucks are pre-stocked with parts for rapid solutions.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="card card-top-accent fade-in-up">
+          <div class="card-image-container">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&h=400&q=80" alt="Insurance contract handshake representing safety">
+          </div>
+          <h3 class="card-title">Fully Insured</h3>
+          <p class="card-description"><strong>Zero Risk To You</strong><br>We protect your home with general liability coverage and bonded techs.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="card card-top-accent fade-in-up">
+          <div class="card-image-container">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=600&h=400&q=80" alt="Certified ProLift garage door technician">
+          </div>
+          <h3 class="card-title">Expert Techs</h3>
+          <p class="card-description"><strong>Certified Specialists</strong><br>Our technicians undergo rigorous certifications to handle all door types.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="card card-top-accent fade-in-up">
+          <div class="card-image-container">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&h=400&q=80" alt="Invoice receipt checklist showing transparent flat-rate pricing">
+          </div>
+          <h3 class="card-title">Flat-Rate Pricing</h3>
+          <p class="card-description"><strong>No Surprise Bills</strong><br>Pre-approved quotes before any labor starts. What we quote is what you pay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: BEFORE & AFTER GALLERY ROW -->
+  <section class="section section-alt" id="before-after-gallery">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Workmanship Showcase</h2>
+        <p class="section-subtitle fade-in">See the dramatic visual and mechanical transformations from our recent service runs.</p>
+      </div>
+
+      <div class="gallery-grid stagger-grid">
+        <!-- Item 1 -->
+        <div class="gallery-item scale-in">
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&h=400&q=80" alt="Technician repairing garage door components">
+          <div class="gallery-overlay">Before</div>
+        </div>
+        <!-- Item 2 -->
+        <div class="gallery-item scale-in">
+          <img src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=600&h=400&q=80" alt="Modern house with new garage door installation">
+          <div class="gallery-overlay">After</div>
+        </div>
+        <!-- Item 3 -->
+        <div class="gallery-item scale-in">
+          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&h=400&q=80" alt="Garage door system alignment">
+          <div class="gallery-overlay">Repaired</div>
+        </div>
+        <!-- Item 4 -->
+        <div class="gallery-item scale-in">
+          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&h=400&q=80" alt="Smart WiFi belt-drive opener unit overhead">
+          <div class="gallery-overlay">Upgraded</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: INSTANT PRICE ESTIMATOR -->
+  <section class="section section-alt" id="price-estimator">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title fade-in">Instant Price Estimator</h2>
+        <p class="section-subtitle fade-in">Select your service type and door details below to get an instant ballpark estimate — no obligation, no hidden fees.</p>
+      </div>
+
+      <div class="estimator-layout scale-in">
+        <!-- Left: Controls -->
+        <div class="estimator-controls">
+
+          <div class="estimator-group">
+            <label class="estimator-label"><i class="fa-solid fa-screwdriver-wrench"></i> Service Type</label>
+            <div class="estimator-options" id="est-service">
+              <button class="est-option active" data-value="spring" data-base="180">Spring Replacement</button>
+              <button class="est-option" data-value="cable" data-base="140">Cable Repair</button>
+              <button class="est-option" data-value="opener" data-base="220">Opener Install</button>
+              <button class="est-option" data-value="install" data-base="850">New Door Install</button>
+              <button class="est-option" data-value="tune" data-base="89">Tune-Up &amp; Lube</button>
+              <button class="est-option" data-value="track" data-base="160">Track Realignment</button>
+            </div>
+          </div>
+
+          <div class="estimator-group">
+            <label class="estimator-label"><i class="fa-solid fa-ruler-combined"></i> Door Size</label>
+            <div class="estimator-options" id="est-size">
+              <button class="est-option active" data-value="single" data-mult="1.0">Single Car (8×7 ft)</button>
+              <button class="est-option" data-value="double" data-mult="1.6">Double Car (16×7 ft)</button>
+              <button class="est-option" data-value="rv" data-mult="2.1">RV / Oversized</button>
+            </div>
+          </div>
+
+          <div class="estimator-group">
+            <label class="estimator-label"><i class="fa-solid fa-star"></i> Material / Grade</label>
+            <div class="estimator-options" id="est-grade">
+              <button class="est-option active" data-value="standard" data-add="0">Standard Steel</button>
+              <button class="est-option" data-value="insulated" data-add="120">Insulated Steel</button>
+              <button class="est-option" data-value="premium" data-add="280">Premium Carriage</button>
+            </div>
+          </div>
+
+          <div class="estimator-group">
+            <label class="estimator-label"><i class="fa-solid fa-bolt"></i> Urgency</label>
+            <div class="estimator-options" id="est-urgency">
+              <button class="est-option active" data-value="scheduled" data-add="0">Scheduled Visit</button>
+              <button class="est-option" data-value="sameday" data-add="40">Same-Day Service</button>
+              <button class="est-option" data-value="emergency" data-add="90">24/7 Emergency</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Result Display -->
+        <div class="estimator-result-panel">
+          <div class="estimator-result-card">
+            <div class="result-service-name" id="result-service-name">Spring Replacement</div>
+            <div class="result-price-label">Estimated Cost Range</div>
+            <div class="result-price" id="result-price">
+              <span class="price-low" id="price-low">$180</span>
+              <span class="price-sep">–</span>
+              <span class="price-high" id="price-high">$240</span>
+            </div>
+            <div class="result-note">
+              <i class="fa-solid fa-circle-info"></i>
+              Final price confirmed on-site after inspection. Parts &amp; labor included.
+            </div>
+            <ul class="result-includes" id="result-includes">
+              <li><i class="fa-solid fa-circle-check"></i> Free on-site diagnosis</li>
+              <li><i class="fa-solid fa-circle-check"></i> Flat-rate quote before work begins</li>
+              <li><i class="fa-solid fa-circle-check"></i> Licensed &amp; insured technician</li>
+              <li><i class="fa-solid fa-circle-check"></i> 90-day parts warranty</li>
+            </ul>
+            <a href="signup.html" class="btn btn-primary" id="btn-get-estimate" style="width:100%; text-align:center; margin-top: calc(var(--space)*3);">
+              <i class="fa-solid fa-calendar-check"></i> Book &amp; Lock In This Rate
+            </a>
+          </div>
+
+          <div class="estimator-disclaimer">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Price-match guarantee — if you find a lower quote from a licensed competitor, we'll beat it.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* ===== PRICE ESTIMATOR SECTION ===== */
+    .estimator-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: calc(var(--space) * 6);
+      align-items: start;
+      margin-top: calc(var(--space) * 6);
+    }
+    @media (max-width: 900px) {
+      .estimator-layout { grid-template-columns: 1fr; }
+    }
+    .estimator-controls { display: flex; flex-direction: column; gap: calc(var(--space) * 5); }
+    .estimator-group { display: flex; flex-direction: column; gap: calc(var(--space) * 2); }
+    .estimator-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .estimator-label i { color: var(--primary); }
+    .estimator-options { display: flex; flex-wrap: wrap; gap: calc(var(--space) * 1.5); }
+    .est-option {
+      padding: 10px 18px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+      color: var(--charcoal);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.22s ease;
+    }
+    .est-option:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .est-option.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(240,100,0,0.35);
+    }
+
+    /* Result Panel */
+    .estimator-result-panel { display: flex; flex-direction: column; gap: calc(var(--space)*3); }
+    .estimator-result-card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 20px;
+      padding: calc(var(--space)*5);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 100px;
+    }
+    .result-service-name {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      margin-bottom: calc(var(--space)*1.5);
+    }
+    .result-price-label {
+      font-size: 0.8rem;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: calc(var(--space)*1.5);
+    }
+    .result-price {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: calc(var(--space)*3);
+    }
+    .price-low, .price-high {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--charcoal);
+      line-height: 1;
+      transition: all 0.35s ease;
+    }
+    .price-sep { font-size: 1.5rem; color: var(--gray); font-weight: 300; }
+    .result-note {
+      background: #fff8f0;
+      border-left: 3px solid var(--primary);
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 0.84rem;
+      color: var(--gray);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: calc(var(--space)*3);
+    }
+    .result-note i { color: var(--primary); flex-shrink: 0; margin-top: 2px; }
+    .result-includes { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .result-includes li {
+      font-size: 0.88rem;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .result-includes li i { color: #22c55e; }
+    .estimator-disclaimer {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 0.82rem;
+      color: var(--gray);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .estimator-disclaimer i { color: var(--primary); font-size: 1.1rem; flex-shrink: 0; }
+    #btn-get-estimate {
+      white-space: normal;
+      line-height: 1.3;
+    }
+  </style>
+
+  <script>
+    (function() {
+      const serviceData = {
+        spring:  { name: "Spring Replacement",   base: 180, spread: 60 },
+        cable:   { name: "Cable Repair",          base: 140, spread: 50 },
+        opener:  { name: "Opener Installation",   base: 220, spread: 80 },
+        install: { name: "New Door Installation", base: 850, spread: 300 },
+        tune:    { name: "Tune-Up & Lubrication", base: 89,  spread: 30 },
+        track:   { name: "Track Realignment",     base: 160, spread: 55 },
+      };
+
+      let selectedService = 'spring';
+      let selectedMult    = 1.0;
+      let selectedGradeAdd = 0;
+      let selectedUrgencyAdd = 0;
+
+      function updateEstimate() {
+        const svc = serviceData[selectedService];
+        const low  = Math.round((svc.base + selectedGradeAdd + selectedUrgencyAdd) * selectedMult);
+        const high = Math.round((svc.base + svc.spread + selectedGradeAdd + selectedUrgencyAdd) * selectedMult);
+        document.getElementById('result-service-name').textContent = svc.name;
+        document.getElementById('price-low').textContent  = '$' + low.toLocaleString();
+        document.getElementById('price-high').textContent = '$' + high.toLocaleString();
+      }
+
+      function wireGroup(groupId, handler) {
+        document.getElementById(groupId).querySelectorAll('.est-option').forEach(btn => {
+          btn.addEventListener('click', () => {
+            document.getElementById(groupId).querySelectorAll('.est-option').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            handler(btn);
+            updateEstimate();
+          });
+        });
+      }
+
+      wireGroup('est-service',  btn => { selectedService = btn.dataset.value; });
+      wireGroup('est-size',     btn => { selectedMult    = parseFloat(btn.dataset.mult); });
+      wireGroup('est-grade',    btn => { selectedGradeAdd = parseInt(btn.dataset.add); });
+      wireGroup('est-urgency',  btn => { selectedUrgencyAdd = parseInt(btn.dataset.add); });
+    })();
+  </script>
+
+  <!-- SECTION 6: LIVE DISPATCH HUB -->
+  <section class="section" id="live-dispatch">
+    <div class="container grid-2">
+      <div class="split-content fade-in-left">
+        <h2 class="section-title" style="margin-left:0; text-align:start;">Live Dispatch Hub</h2>
+        <p>Our centralized dispatch coordinates dozens of local technicians every day. You'll receive real-time updates when your assigned service provider starts heading to your address.</p>
+        <p style="margin-top: var(--space); color: var(--gray);">Our digital dispatch sends SMS tracking links with technician bios, rating reviews, and GPS coordinates directly to your smartphone.</p>
+        <div style="margin-top: calc(var(--space) * 3);">
+          <a href="signup.html" class="btn btn-primary">Book Your Slot Now</a>
+        </div>
+      </div>
+      
+      <div class="tracker-card fade-in-right" id="live-tracker">
+        <div class="tracker-header">
+          <h3 class="tracker-title"><span class="pulse-red"></span> Active Field Dispatch</h3>
+          <span style="font-size:0.8rem; font-weight:bold; color:var(--gray);">AUTO-UPDATE LIVE</span>
+        </div>
+        <div class="tracker-list" id="tracker-list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: NEWSLETTER & PROMO SIGNUP -->
+  <section class="section section-alt" id="newsletter">
+    <div class="container text-center">
+      <div class="scale-in" style="max-width: 600px; margin: 0 auto;">
+        <h2 style="margin-bottom: calc(var(--space) * 2.5);">Get Maintenance Tips & Deals</h2>
+        <p style="color: var(--gray); margin-bottom: calc(var(--space) * 4);">Subscribe to our monthly newsletter for safety checklists, winter prep advice, and exclusive customer coupon offers.</p>
+        
+        <form onsubmit="event.preventDefault(); alert('Subscribed successfully!');" style="display: flex; gap: var(--space); max-width: 500px; margin: 0 auto;">
+          <input type="email" placeholder="Enter your email address" class="form-input" style="flex: 1;" required>
+          <button type="submit" class="btn btn-primary" style="border-radius: var(--radius-input);">Subscribe</button>
+        </form>
+        <p style="font-size: 0.8rem; color: var(--gray); margin-top: var(--space);">No spam. Unsubscribe at any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <i class="fa-solid fa-warehouse"></i> ProLift
+          </div>
+          <p>Serving Phoenix & surrounding areas since 1999. Family owned, locally operated, and built on trust and credibility.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home1.html" class="footer-link">HOME 2</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">New Installation</a></li>
+            <li><a href="services.html" class="footer-link">Spring Repair</a></li>
+            <li><a href="services.html" class="footer-link">Cable Repair</a></li>
+            <li><a href="services.html" class="footer-link">Opener Install</a></li>
+            <li><a href="services.html" class="footer-link">Tune-Up & Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Phone:</strong><br>
+                (602) 555-0198
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email:</strong><br>
+                info@proliftdoors.com
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Address:</strong><br>
+                Phoenix, AZ 85001
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Hours:</strong><br>
+                Mon–Sat: 7AM–8PM<br>
+                Sun: Emergency Only
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 ProLift. All rights reserved.</div>
+        <div class="footer-rating">
+          <i class="fa-solid fa-star"></i>
+          <span><strong>4.9/5</strong> Google Rating</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - ProLift</title>
+  <meta name="description" content="Contact ProLift for fast, reliable garage door repair and installation services. We are here to help.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="main-navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" id="nav-logo">
+        <i class="fa-solid fa-warehouse"></i> ProLift
+      </a>
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="index.html" class="navbar-link" id="link-home">Home</a></li>
+        <li><a href="home1.html" class="navbar-link" id="link-home1">HOME 2</a></li>
+        <li><a href="about.html" class="navbar-link" id="link-about">About</a></li>
+        <li><a href="services.html" class="navbar-link" id="link-services">Services</a></li>
+        <li><a href="pricing.html" class="navbar-link" id="link-pricing">Pricing</a></li>
+        <li><a href="dashboard.html" class="navbar-link" id="link-dashboard">Dashboard</a></li>
+        <li><a href="contact.html" class="navbar-link" id="link-contact">Contact</a></li>
+        <li class="mobile-controls" style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 0;">
+          <button class="control-btn" id="theme-toggle" aria-label="Toggle dark theme">
+            <i class="fa-solid fa-moon"></i> <span>Dark</span>
+          </button>
+          <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL direction">
+            <i class="fa-solid fa-globe"></i> <span>RTL</span>
+          </button>
+        </li>
+      </ul>
+      <div class="navbar-controls">
+        <a href="signup.html" class="btn btn-primary" id="link-signup" style="padding: 8px 20px; font-size: 0.9rem;">Sign Up</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: PAGE HEADER HERO -->
+  <section class="header-hero" style="background-image: linear-gradient(rgba(28,28,30,0.8), rgba(28,28,30,0.8)), url('https://images.unsplash.com/photo-1596522354195-e84ae3c98731');">
+    <div class="container">
+      <h1 class="fade-in-up">Contact Us</h1>
+      <p class="fade-in-up">Get in touch with our experts for service, quotes, or emergency repairs.</p>
+      <div class="breadcrumb justify-content-center fade-in-up" style="justify-content: center;">
+        <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:0.75rem;"></i> <span>Contact</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: CONTACT INFO & FORM -->
+  <section class="section">
+    <div class="container grid-2">
+      <div>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle" style="margin-left: 0; text-align: left;">Our team is ready to answer your questions and provide fast, reliable garage door solutions.</p>
+        
+        <div style="margin-bottom: var(--space); display: flex; gap: 15px; align-items: flex-start;">
+          <i class="fa-solid fa-location-dot text-primary" style="font-size: 1.5rem; margin-top: 5px;"></i>
+          <div>
+            <h4 style="margin-bottom: 5px;">Office Location</h4>
+            <p style="color: var(--gray);">1234 Repair Way, Phoenix, AZ 85001</p>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: var(--space); display: flex; gap: 15px; align-items: flex-start;">
+          <i class="fa-solid fa-phone text-primary" style="font-size: 1.5rem; margin-top: 5px;"></i>
+          <div>
+            <h4 style="margin-bottom: 5px;">Phone Number</h4>
+            <p style="color: var(--gray);">+1 (555) 123-4567</p>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: var(--space); display: flex; gap: 15px; align-items: flex-start;">
+          <i class="fa-solid fa-envelope text-primary" style="font-size: 1.5rem; margin-top: 5px;"></i>
+          <div>
+            <h4 style="margin-bottom: 5px;">Email Address</h4>
+            <p style="color: var(--gray);">support@prolift.com</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" style="background: var(--card-bg); padding: calc(var(--space) * 4); border-radius: var(--radius-card); box-shadow: var(--shadow);">
+        <form>
+          <div class="form-group" style="margin-bottom: 15px;">
+            <label class="form-label" for="name">Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Your Name" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: var(--radius-input); background: var(--bg); color: var(--text);">
+          </div>
+          <div class="form-group" style="margin-bottom: 15px;">
+            <label class="form-label" for="email">Email</label>
+            <input type="email" id="email" class="form-input" placeholder="Your Email" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: var(--radius-input); background: var(--bg); color: var(--text);">
+          </div>
+          <div class="form-group" style="margin-bottom: 15px;">
+            <label class="form-label" for="message">Message</label>
+            <textarea id="message" class="form-input" placeholder="How can we help?" rows="5" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: var(--radius-input); background: var(--bg); color: var(--text); resize: vertical;"></textarea>
+          </div>
+          <button type="button" class="btn btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <i class="fa-solid fa-warehouse"></i> ProLift
+          </div>
+          <p>Serving Phoenix & surrounding areas since 1999. Family owned, locally operated, and built on trust and credibility.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home1.html" class="footer-link">HOME 2</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+            <li><a href="signup.html" class="footer-link">Sign Up</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">New Installation</a></li>
+            <li><a href="services.html" class="footer-link">Spring Repair</a></li>
+            <li><a href="services.html" class="footer-link">Cable Repair</a></li>
+            <li><a href="services.html" class="footer-link">Opener Install</a></li>
+            <li><a href="services.html" class="footer-link">Tune-Up & Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Phone:</strong><br>
+                (602) 555-0198
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email:</strong><br>
+                info@proliftdoors.com
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Address:</strong><br>
+                Phoenix, AZ 85001
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Hours:</strong><br>
+                Mon–Sat: 7AM–8PM<br>
+                Sun: Emergency Only
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 ProLift. All rights reserved.</div>
+        <div class="footer-rating">
+          <i class="fa-solid fa-star"></i>
+          <span><strong>4.9/5</strong> Google Rating</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+

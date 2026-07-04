@@ -14,6 +14,36 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    @media (max-width: 900px) {
+      .contact-info-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .contact-info-col .section-title {
+        text-align: center;
+      }
+      .contact-info-col .section-title::after {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .contact-info-col .section-subtitle {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .contact-info-item {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+      }
+      .contact-info-col .social-links {
+        justify-content: center !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -63,11 +93,11 @@
   <!-- SECTION 2: CONTACT INFO & FORM -->
   <section class="section">
     <div class="container grid-2">
-      <div>
+      <div class="contact-info-col">
         <h2 class="section-title">Get In Touch</h2>
         <p class="section-subtitle" style="margin-left: 0; text-align: left;">Our team is ready to answer your questions and provide fast, reliable garage door solutions.</p>
         
-        <div style="margin-bottom: var(--space); display: flex; gap: 15px; align-items: flex-start;">
+        <div class="contact-info-item" style="margin-bottom: var(--space); display: flex; gap: 15px; align-items: flex-start;">
           <i class="fa-solid fa-location-dot text-primary" style="font-size: 1.5rem; margin-top: 5px;"></i>
           <div>
             <h4 style="margin-bottom: 5px;">Office Location</h4>
@@ -75,7 +105,7 @@
           </div>
         </div>
         
-        <div style="margin-bottom: var(--space); display: flex; gap: 15px; align-items: flex-start;">
+        <div class="contact-info-item" style="margin-bottom: var(--space); display: flex; gap: 15px; align-items: flex-start;">
           <i class="fa-solid fa-phone text-primary" style="font-size: 1.5rem; margin-top: 5px;"></i>
           <div>
             <h4 style="margin-bottom: 5px;">Phone Number</h4>
@@ -83,17 +113,27 @@
           </div>
         </div>
         
-        <div style="margin-bottom: var(--space); display: flex; gap: 15px; align-items: flex-start;">
+        <div class="contact-info-item" style="margin-bottom: var(--space); display: flex; gap: 15px; align-items: flex-start;">
           <i class="fa-solid fa-envelope text-primary" style="font-size: 1.5rem; margin-top: 5px;"></i>
           <div>
             <h4 style="margin-bottom: 5px;">Email Address</h4>
             <p style="color: var(--gray);">support@prolift.com</p>
           </div>
         </div>
+
+        <div style="margin-top: calc(var(--space) * 2);">
+          <h4 style="margin-bottom: 15px;">Follow Us</h4>
+          <div class="social-links" style="justify-content: flex-start; gap: 10px; display: flex;">
+            <a href="#" class="social-icon" aria-label="Facebook" style="background: var(--primary); color: var(--white);"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram" style="background: var(--primary); color: var(--white);"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube" style="background: var(--primary); color: var(--white);"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="Yelp" style="background: var(--primary); color: var(--white);"><i class="fa-brands fa-yelp"></i></a>
+          </div>
+        </div>
       </div>
       
       <div class="card" style="background: var(--card-bg); padding: calc(var(--space) * 4); border-radius: var(--radius-card); box-shadow: var(--shadow);">
-        <form>
+        <form style="text-align: left;">
           <div class="form-group" style="margin-bottom: 15px;">
             <label class="form-label" for="name">Name</label>
             <input type="text" id="name" class="form-input" placeholder="Your Name" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: var(--radius-input); background: var(--bg); color: var(--text);">
@@ -108,6 +148,15 @@
           </div>
           <button type="button" class="btn btn-primary btn-full">Send Message</button>
         </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: LOCATION MAP -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div style="border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow); line-height: 0;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106465.73294336531!2d-112.16434493393952!3d33.43543977595561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b12ed50a179cb%3A0x8c69c7f8354a1bac!2sPhoenix%2C%20AZ!5e0!3m2!1sen!2sus!4v1715694200000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>

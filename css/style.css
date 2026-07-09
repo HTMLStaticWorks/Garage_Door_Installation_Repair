@@ -2136,6 +2136,7 @@ html[dir="rtl"] .activity-item::before {
   .split-hero-left {
     padding: calc(var(--space) * 6) calc(var(--space) * 4);
     text-align: center;
+    align-items: center;
   }
   .split-hero-right {
     padding: calc(var(--space) * 6) calc(var(--space) * 4);
